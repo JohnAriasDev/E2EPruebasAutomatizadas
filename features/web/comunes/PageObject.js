@@ -31,8 +31,15 @@ const {
   TagSlugInput,
   TagDescriptionInput,
   TagSaveButton,
-  MenuManage,
-  TagList
+  TagMenuManage,
+  TagList,
+  MemberNewTagButton,
+  MemberNameInput,
+  MemberEmailInput,
+  MemberSaveButton,
+  MemberMenuManage,
+  MemberList,
+  MemberErrorEmailMessage
 } = require("./PostEditor");
 
 
@@ -73,6 +80,13 @@ module.exports = {
   TagSlugInput,
   TagDescriptionInput,
   TagSaveButton,
-  MenuManage,
-  TagList
+  TagMenuManage,
+  TagList,
+  MemberNewTagButton,
+  MemberNameInput,
+  MemberEmailInput,
+  MemberSaveButton,
+  MemberMenuManage,
+  MemberList,
+  MemberErrorEmailMessage
 };

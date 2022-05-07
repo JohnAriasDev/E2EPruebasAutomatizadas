@@ -175,7 +175,7 @@ Given("I write my email {kraken-string}", async function (email) {
   });
 
   When("I click on tags option menu", async function () {
-    const obj = this.driver.$(selectors.MenuManage);
+    const obj = this.driver.$(selectors.TagMenuManage);
     return await obj.click();
   });
 
@@ -184,34 +184,71 @@ Given("I write my email {kraken-string}", async function (email) {
     return await obj.click();
   });
 
-  When("I write name {kraken-string}", async function (myString) {
+  When("I write tag name {kraken-string}", async function (myString) {
     const obj = await this.driver.$(selectors.TagNameInput);
     return await obj.setValue(myString);
   });
 
-  When("I write color {kraken-string}", async function (myString) {
+  When("I write tag color {kraken-string}", async function (myString) {
     const obj = await this.driver.$(selectors.TagColorInput);
     return await obj.setValue(myString);
   });
 
-  When("I write slug {kraken-string}", async function (myString) {
+  When("I write tag slug {kraken-string}", async function (myString) {
     const obj = await this.driver.$(selectors.TagSlugInput);
     return await obj.setValue(myString);
   });
 
-  When("I write description {kraken-string}", async function (myString) {
+  When("I write tag description {kraken-string}", async function (myString) {
     const obj = await this.driver.$(selectors.TagDescriptionInput);
     return await obj.setValue(myString);
   });
 
-  When("I click on the save button", async function () {
+  When("I click on the tag save button", async function () {
     const obj = this.driver.$(selectors.TagSaveButton);
     return await obj.click();
   });
 
    
-  Then("I see that list has a title with name {kraken-string}", async function (myString) {
-      const list = await this.driver.$$(selectors.TagList);
-      const postTitle = await list[0].getText();
-      expect(postTitle).to.not.equal(myString);
+  Then("I see that tag list has a title with name {kraken-string}", async function (myString) {
+    const obj = await this.driver.$(selectors.MemberList).getText();
+    expect(obj).to.equal(myString);
   });
+ 
+  
+  When("I click on member option menu", async function () {
+    const obj = this.driver.$(selectors.MemberMenuManage);
+    return await obj.click();
+  });
+
+  When("I click on the new member button", async function () {
+    const obj = this.driver.$(selectors.MemberNewTagButton);
+    return await obj.click();
+  });
+
+  When("I write member name {kraken-string}", async function (myString) {
+    const obj = await this.driver.$(selectors.MemberNameInput);
+    return await obj.setValue(myString);
+  });
+
+  When("I write member email {kraken-string}", async function (myString) {
+    const obj = await this.driver.$(selectors.MemberEmailInput);
+    return await obj.setValue(myString);
+  });
+
+  When("I click on the member save button", async function () {
+    const obj = this.driver.$(selectors.TagSaveButton);
+    return await obj.click();
+  });
+
+  Then("I see that member list has a title name {kraken-string}", async function (myString) {
+      const obj = await this.driver.$(selectors.MemberList).getText();
+      expect(obj).to.equal(myString);
+  });
+
+
+  Then("I see a error email message {kraken-string}", async function (myString) {
+    const obj = await this.driver.$(selectors.MemberErrorEmailMessage).getText();
+    expect(obj).to.equal(myString);
+});
+  

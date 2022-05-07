@@ -145,19 +145,47 @@ Feature: Create draft post
 #  Then I count the list elements
 #  And I wait for 2 seconds
  
-Scenario: Create a tag successfuly
-  Given I navigate to page "http://localhost:2368/ghost/"
-  And I write my email "<ADMIN_EMAIL>"
-  And I enter password "<ADMIN_PASSWORD>"
-  And I click on the login button
-  And I wait for 2 seconds
-  When I click on tags option menu
-  And I click on the new tag button
-  And I write name "Animals"
-  And I write color "707070"
-  And I write slug "animals"
-  And I write description "Tags for animals"
-  And I click on the save button
-  And I wait for 4 seconds
-  And I click on tags option menu
-  Then I see that list has a title with name "Animals"
+#Scenario: Create a tag successfuly
+  #Given I navigate to page "http://localhost:2368/ghost/"
+  #And I write my email "<ADMIN_EMAIL>"
+  #And I enter password "<ADMIN_PASSWORD>"
+  #And I click on the login button
+  #And I wait for 2 seconds
+  #When I click on tags option menu
+  #And I click on the new tag button
+  #And I write tag name "Animals"
+  #And I write tag color "707070"
+  #And I write tag slug "animals"
+  #And I write tag description "Tags for animals"
+  #And I click on the tag save button
+  #And I wait for 2 seconds
+  #And I click on tags option menu
+  #Then I see that tag list has a title name "Animals"
+
+#Scenario: Create a member successfuly
+  #Given I navigate to page "http://localhost:2368/ghost/"
+  #And I write my email "<ADMIN_EMAIL>"
+  #And I enter password "<ADMIN_PASSWORD>"
+  #And I click on the login button
+  #And I wait for 2 seconds
+  #When I click on member option menu
+  #And I click on the new member button
+  #And I write member name "Pepe"
+  #And I write member email "pepe@yopmail.com"
+  #And I click on the member save button
+  #And I wait for 2 seconds
+  #And I click on member option menu
+  #Then I see that member list has a title name "Pepe"
+
+#Scenario: Create a member without email
+  #Given I navigate to page "http://localhost:2368/ghost/"
+  #And I write my email "<ADMIN_EMAIL>"
+  #And I enter password "<ADMIN_PASSWORD>"
+  #And I click on the login button
+  #And I wait for 2 seconds
+  #When I click on member option menu
+  #And I click on the new member button
+  #And I write member name "Lulu"
+  #And I click on the member save button
+  #And I wait for 2 seconds
+  #Then I see a error email message "Please enter an email."

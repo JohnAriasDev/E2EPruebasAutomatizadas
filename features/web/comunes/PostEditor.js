@@ -30,9 +30,17 @@ const TagNameInput = '#tag-name';
 const TagColorInput = '/html/body/div[2]/div/main/section/form/div[2]/div/section/div/div[1]/div[1]/div[2]/div/input';
 const TagSlugInput = '#tag-slug';
 const TagDescriptionInput = '#tag-description';
-const TagSaveButton = '/html/body/div[2]/div/main/section/form/div[1]/header/section/button';
-const MenuManage = '/html/body/div[2]/div/nav[1]/div/section/div[1]/ul[2]/li[3]/a';
-const TagList = '.tags-list.gh-list';
+const TagSaveButton = '.gh-btn.gh-btn-primary.gh-btn-icon.ember-view';
+const TagMenuManage = '/html/body/div[2]/div/nav[1]/div/section/div[1]/ul[2]/li[3]/a';
+const TagList = '.gh-tag-list-name > .ma0.pa0.f8.midgrey.gh-tag-list-description';
+
+const MemberNewTagButton = '.ember-view.gh-btn.gh-btn-primary';
+const MemberNameInput = '#member-name';
+const MemberEmailInput = '#member-email';
+const MemberSaveButton = '.gh-btn.gh-btn-primary.gh-btn-icon.ember-view';
+const MemberMenuManage = '/html/body/div[2]/div/nav[1]/div/section/div[1]/ul[2]/li[4]/a';
+const MemberList = '.ember-view.gh-list-data > .flex.items-center > .w-80 > .ma0.pa0.gh-members-list-name';
+const MemberErrorEmailMessage = '.form-group.max-width.error.ember-view > p.response';
 
 module.exports = {
   ButtonBack,
@@ -65,6 +73,13 @@ module.exports = {
   TagSlugInput,
   TagDescriptionInput,
   TagSaveButton,
-  MenuManage,
-  TagList
+  TagMenuManage,
+  TagList,
+  MemberNewTagButton,
+  MemberNameInput,
+  MemberEmailInput,
+  MemberSaveButton,
+  MemberMenuManage,
+  MemberList,
+  MemberErrorEmailMessage
 };
