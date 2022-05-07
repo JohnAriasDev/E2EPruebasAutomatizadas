@@ -210,7 +210,7 @@ Given("I write my email {kraken-string}", async function (email) {
   });
 
    
-  Then("I see that tag list has a title with name {kraken-string}", async function (myString) {
+  Then("I see that tag list has a title name {kraken-string}", async function (myString) {
     const obj = await this.driver.$(selectors.MemberList).getText();
     expect(obj).to.equal(myString);
   });
