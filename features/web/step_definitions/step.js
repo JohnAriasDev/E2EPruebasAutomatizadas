@@ -252,3 +252,32 @@ Given("I write my email {kraken-string}", async function (email) {
     expect(obj).to.equal(myString);
 });
   
+Given("I click on member option menu list", async function () {
+  const obj = this.driver.$(selectors.MemberMenuManage);
+  return await obj.click();
+});
+
+When("I see a first list of members", async function () {
+  const obj = this.driver.$(selectors.MemberFirstRowList);
+  return await obj.click();
+});
+
+Then("I see the member list", async function () {
+  const obj = await this.driver.$(selectors.MemberListExists);
+  expect(obj).to.not.equal(undefined);
+});
+
+Given("I click on tags option menu list", async function () {
+  const obj = this.driver.$(selectors.TagMenuManage);
+  return await obj.click();
+});
+
+When("I see a first list of tags", async function () {
+  const obj = this.driver.$(selectors.TagFirstRowList);
+  return await obj.click();
+});
+
+Then("I see the tags list", async function () {
+  const obj = await this.driver.$(selectors.TagListExists);
+  expect(obj).to.not.equal(undefined);
+});

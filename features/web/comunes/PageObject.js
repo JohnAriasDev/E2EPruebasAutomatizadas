@@ -39,7 +39,12 @@ const {
   MemberSaveButton,
   MemberMenuManage,
   MemberList,
-  MemberErrorEmailMessage
+  MemberErrorEmailMessage,
+  MemberFirstRowList,
+  MemberListEmpty,
+  MemberListExists,
+  TagFirstRowList,
+  TagListExists
 } = require("./PostEditor");
 
 
@@ -88,5 +93,10 @@ module.exports = {
   MemberSaveButton,
   MemberMenuManage,
   MemberList,
-  MemberErrorEmailMessage
+  MemberErrorEmailMessage,
+  MemberFirstRowList,
+  MemberListEmpty,
+  MemberListExists,
+  TagFirstRowList,
+  TagListExists
 };

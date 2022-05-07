@@ -32,7 +32,9 @@ const TagSlugInput = '#tag-slug';
 const TagDescriptionInput = '#tag-description';
 const TagSaveButton = '.gh-btn.gh-btn-primary.gh-btn-icon.ember-view';
 const TagMenuManage = '/html/body/div[2]/div/nav[1]/div/section/div[1]/ul[2]/li[3]/a';
+const TagFirstRowList = '.ember-view.gh-list-data.gh-tag-list-title.gh-list-cellwidth-70';
 const TagList = '.gh-tag-list-name > .ma0.pa0.f8.midgrey.gh-tag-list-description';
+const TagListExists = 'body > div.gh-app > div > main > section > section > ol'
 
 const MemberNewTagButton = '.ember-view.gh-btn.gh-btn-primary';
 const MemberNameInput = '#member-name';
@@ -41,6 +43,8 @@ const MemberSaveButton = '.gh-btn.gh-btn-primary.gh-btn-icon.ember-view';
 const MemberMenuManage = '/html/body/div[2]/div/nav[1]/div/section/div[1]/ul[2]/li[4]/a';
 const MemberList = '.ember-view.gh-list-data > .flex.items-center > .w-80 > .ma0.pa0.gh-members-list-name';
 const MemberErrorEmailMessage = '.form-group.max-width.error.ember-view > p.response';
+const MemberFirstRowList = '.ember-view.gh-list-data';
+const MemberListExists = 'body > div.gh-app > div > main > section > section > div.gh-list-scrolling.gh-list-with-helpsection > table'
 
 module.exports = {
   ButtonBack,
@@ -81,5 +85,9 @@ module.exports = {
   MemberSaveButton,
   MemberMenuManage,
   MemberList,
-  MemberErrorEmailMessage
+  MemberErrorEmailMessage,
+  MemberFirstRowList,
+  MemberListExists,
+  TagFirstRowList,
+  TagListExists
 };
