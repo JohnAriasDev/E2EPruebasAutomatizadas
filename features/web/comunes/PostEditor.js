@@ -25,6 +25,14 @@ const PostItemTitle = "/html[1]/body[1]/div[2]/div[1]/main[1]/section[1]/section
 const DraftToPublish = "/html[1]/body[1]/div[2]/div[1]/nav[1]/div[1]/section[1]/div[1]/ul[2]/li[1]/div[1]/div[1]/ul[1]/li[1]/a[1]/span[1]"
 const ListElements ="a.gh-list-data.gh-post-list-title"
 
+const TagNewTagButton = '.ember-view.gh-btn.gh-btn-primary';
+const TagNameInput = '#tag-name';
+const TagColorInput = '/html/body/div[2]/div/main/section/form/div[2]/div/section/div/div[1]/div[1]/div[2]/div/input';
+const TagSlugInput = '#tag-slug';
+const TagDescriptionInput = '#tag-description';
+const TagSaveButton = '/html/body/div[2]/div/main/section/form/div[1]/header/section/button';
+const MenuManage = '/html/body/div[2]/div/nav[1]/div/section/div[1]/ul[2]/li[3]/a';
+const TagList = '.tags-list.gh-list';
 
 module.exports = {
   ButtonBack,
@@ -50,5 +58,13 @@ module.exports = {
   PostItemTitle,
   NewPost,
   DraftToPublish,
-  ListElements
+  ListElements,
+  TagNewTagButton,
+  TagNameInput,
+  TagColorInput,
+  TagSlugInput,
+  TagDescriptionInput,
+  TagSaveButton,
+  MenuManage,
+  TagList
 };

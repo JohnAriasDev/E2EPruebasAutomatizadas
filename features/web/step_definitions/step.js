@@ -173,3 +173,45 @@ Given("I write my email {kraken-string}", async function (email) {
     const pagetitle = await this.driver.$$(selectors.PageTitlePreview);
     expect(pagetitle).to.not.equal(title);
   });
+
+  When("I click on tags option menu", async function () {
+    const obj = this.driver.$(selectors.MenuManage);
+    return await obj.click();
+  });
+
+  When("I click on the new tag button", async function () {
+    const obj = this.driver.$(selectors.TagNewTagButton);
+    return await obj.click();
+  });
+
+  When("I write name {kraken-string}", async function (myString) {
+    const obj = await this.driver.$(selectors.TagNameInput);
+    return await obj.setValue(myString);
+  });
+
+  When("I write color {kraken-string}", async function (myString) {
+    const obj = await this.driver.$(selectors.TagColorInput);
+    return await obj.setValue(myString);
+  });
+
+  When("I write slug {kraken-string}", async function (myString) {
+    const obj = await this.driver.$(selectors.TagSlugInput);
+    return await obj.setValue(myString);
+  });
+
+  When("I write description {kraken-string}", async function (myString) {
+    const obj = await this.driver.$(selectors.TagDescriptionInput);
+    return await obj.setValue(myString);
+  });
+
+  When("I click on the save button", async function () {
+    const obj = this.driver.$(selectors.TagSaveButton);
+    return await obj.click();
+  });
+
+   
+  Then("I see that list has a title with name {kraken-string}", async function (myString) {
+      const list = await this.driver.$$(selectors.TagList);
+      const postTitle = await list[0].getText();
+      expect(postTitle).to.not.equal(myString);
+  });

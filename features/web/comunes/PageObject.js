@@ -24,7 +24,15 @@ const {
   OlPostList,
   PostItemTitle,
   NewPost,DraftToPublish,
-  ListElements
+  ListElements,
+  TagNewTagButton,
+  TagNameInput,
+  TagColorInput,
+  TagSlugInput,
+  TagDescriptionInput,
+  TagSaveButton,
+  MenuManage,
+  TagList
 } = require("./PostEditor");
 
 
@@ -58,5 +66,13 @@ module.exports = {
   PageMenu,
   PagePreview,
   ListElements,
-  PageTitlePreview
+  PageTitlePreview,
+  TagNewTagButton,
+  TagNameInput,
+  TagColorInput,
+  TagSlugInput,
+  TagDescriptionInput,
+  TagSaveButton,
+  MenuManage,
+  TagList
 };
