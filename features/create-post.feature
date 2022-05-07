@@ -1,30 +1,40 @@
 Feature: Create draft post
 
 @user1 @web
-Scenario: Create a draft post successfully
-  Given I navigate to page "http://localhost:2368/ghost/"
-  And I write my email "<ADMIN_EMAIL>"
-  And I enter password "<ADMIN_PASSWORD>"
-  And I click on the login button
-  And I wait for 2 seconds
-  When I click on the new post button
-  And I wait for 2 seconds
-  And I write "postgrupo36" in the post title
-  And I wait for 4 seconds
-  And I return to the posts list
-  And I wait for 2 seconds
-  And I filter posts by status Draft
-  And I wait for 1 seconds
-  Then I see that the first post in the list has title "postgrupo36"
-  And  I click in the first post in the list
-  And I wait for 2 seconds
-  And I publish the new post
-  And I wait for 2 seconds
-  And I return to the posts list
-  And I wait for 2 seconds
-  And I filter posts by status Published
-  Then I see that the first post in the list has title "postgrupo36"
-  And I wait for 2 seconds
+#Scenario: Create a draft post 
+ # Given I navigate to page "http://localhost:2368/ghost/"
+ # And I write my email "<ADMIN_EMAIL>"
+ # And I enter password "<ADMIN_PASSWORD>"
+ # And I click on the login button
+ # And I wait for 2 seconds
+ # When I click on the new post button
+ # And I wait for 2 seconds
+ # And I write "postgrupo36" in the post title
+ # And I wait for 4 seconds
+ # And I click in back button
+ # And I wait for 2 seconds
+ # And I filter list by status Draft
+ # And I wait for 1 seconds
+ # Then I see that the first post in the list has title "postgrupo36"
+ # And I wait for 2 seconds
+
+# Scenario: Publish a post in draft status
+# Given I navigate to page "http://localhost:2368/ghost/"
+#   And I write my email "<ADMIN_EMAIL>"
+#   And I enter password "<ADMIN_PASSWORD>"
+#   And I click on the login button
+#   And I wait for 2 seconds 
+#   And I click on draft button  
+#   And I click in the first item in the list
+#   And I wait for 2 seconds
+#   And I publish the new post
+#   And I wait for 2 seconds
+#   And I click in back button
+#   And I wait for 2 seconds
+#   And I filter the list by status Published
+#   Then I see that the first post in the list has title "postgrupo36"
+#   And I wait for 2 seconds
+
 
 
 # Scenario: Delete latest post 
@@ -35,11 +45,103 @@ Scenario: Create a draft post successfully
 #  And I wait for 2 seconds
 #  And I click on the new post button
 #  And I wait for 2 seconds
-#  And I return to the posts list
+#  And I click in back button
 #  And I wait for 2 seconds
-#  And I click in the first post in the list
+#  And I click in the first item in the list
 #  And I wait for 2 seconds
 #  And I open the post setting
 #  And I wait for 2 seconds
 #  And I delete the post
 #  And I wait for 2 seconds
+#  Then I count the list elements
+#  And I wait for 2 seconds
+   
+
+
+# Scenario: Create Page 
+# Given I navigate to page "http://localhost:2368/ghost/"
+#  And I write my email "<ADMIN_EMAIL>"
+#  And I enter password "<ADMIN_PASSWORD>"
+#  And I click on the login button
+#  And I wait for 2 seconds
+#  And I click on the pages menu
+#  And I wait for 2 seconds
+#  And I click on new page button
+#  And I wait for 2 seconds
+#  When I write "NewPagegrupo36" in the post title
+#  And I wait for 4 seconds
+#  And I click in back button
+#  And I wait for 2 seconds
+#  And I filter list by status Draft
+#  And I wait for 1 seconds
+#  Then I see that the first post in the list has title "NewPagegrupo36"
+#  And I wait for 2 seconds
+
+Scenario: see the  preview page 
+Given I navigate to page "http://localhost:2368/ghost/"
+ And I write my email "<ADMIN_EMAIL>"
+ And I enter password "<ADMIN_PASSWORD>"
+ And I click on the login button
+ And I wait for 2 seconds
+ And I click on the pages menu
+ And I wait for 2 seconds
+ And I click on new page button
+ And I wait for 2 seconds
+ When I write "NewPagegrupo36" in the post title
+ And I wait for 4 seconds
+ And I click in back button
+ And I wait for 2 seconds
+ And I filter list by status Draft
+ And I wait for 1 seconds
+ Then I see that the first post in the list has title "NewPagegrupo36"
+ And I wait for 2 seconds
+ And I click in the first item in the list
+ And I wait for 2 seconds
+ And I see the page preview
+ And I wait for 4 seconds
+ Then check the page title "NewPagegrupo36" in preview
+
+
+#  Scenario: Publish Page
+# Given I navigate to page "http://localhost:2368/ghost/"
+#  And I write my email "<ADMIN_EMAIL>"
+#  And I enter password "<ADMIN_PASSWORD>"
+#  And I click on the login button
+#  And I wait for 2 seconds
+#  And I click on the pages menu
+#  And I wait for 2 seconds
+#  And I filter list by status Draft
+#  And I wait for 1 seconds
+#  And I click in the first item in the list
+#  And I wait for 2 seconds
+#  And I see the page preview
+#  And I wait for 4 seconds
+#  When I publish the new post
+#  And I wait for 2 seconds
+#  And I click in back button
+#  And I wait for 2 seconds
+#  And I click in back button
+#  And I wait for 2 seconds
+#  And I filter the list by status Published
+# Then I see that the first post in the list has title "NewPagegrupo36"
+# And I wait for 2 seconds
+
+
+
+#  Scenario: Delete Page
+# Given I navigate to page "http://localhost:2368/ghost/"
+#  And I write my email "<ADMIN_EMAIL>"
+#  And I enter password "<ADMIN_PASSWORD>"
+#  And I click on the login button
+#  And I wait for 2 seconds
+#  And I click on the pages menu
+#  And I wait for 2 seconds
+#  And I click in the first item in the list
+#  And I wait for 2 seconds 
+#  And I open the post setting
+#  And I wait for 2 seconds
+#  And I delete the post
+#  And I wait for 2 seconds
+#  Then I count the list elements
+#  And I wait for 2 seconds
+ 

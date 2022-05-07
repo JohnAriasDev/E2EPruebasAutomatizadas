@@ -75,19 +75,19 @@ Given("I write my email {kraken-string}", async function (email) {
     return await scheduleConfirmationButton.click();
   });
   
-  When("I return to the posts list", async function () {
+  When("I click in back button", async function () {
     const buttonBack = await this.driver.$(selectors.ButtonBack);
     return await buttonBack.click();
   });
   
-  When("I filter posts by status Published", async function () {
+  When("I filter the list by status Published", async function () {
     const filterByStatus = await this.driver.$(selectors.FilterByStatus);
     await filterByStatus.click();
     const publishedOption = await this.driver.$(selectors.PublishedOption);
     return await publishedOption.click();
   });
   
-  When("I filter posts by status Draft", async function () {
+  When("I filter list by status Draft", async function () {
     const filterByStatus = await this.driver.$(selectors.FilterByStatus);
     await filterByStatus.click();
     const draftOption = await this.driver.$(selectors.DraftOption);
@@ -101,7 +101,7 @@ Given("I write my email {kraken-string}", async function (email) {
     return await scheduledOption.click();
   });
   
-  When("I click in the first post in the list", async function () {
+  When("I click in the first item in the list", async function () {
     const firstPostItem = await this.driver.$(selectors.ListPostItem);
     return await firstPostItem.click();
   });
@@ -120,6 +120,13 @@ Given("I write my email {kraken-string}", async function (email) {
     return await buttonConfirmDeletePost.click();
   });
   
+  
+
+  When("I click on draft button", async function () {
+    let newPost = this.driver.$(selectors.DraftToPublish);
+    return await newPost.click();
+  });
+
  Then(
     "I see that the first post in the list has title {kraken-string}",
     async function (title) {
@@ -138,3 +145,31 @@ Given("I write my email {kraken-string}", async function (email) {
       expect(postTitle).to.not.equal(title);
     }
   );
+
+ 
+  When("I click on the pages menu", async function () {
+    let PageMenu = this.driver.$(selectors.PageMenu);
+    return await PageMenu.click();
+  });
+
+  When("I click on new page button", async function () {
+    let newPage = this.driver.$(selectors.NewPage);
+    return await newPage.click();
+  });
+
+
+  When("I see the page preview", async function () {
+    let pagePreview = this.driver.$(selectors.PagePreview);
+    return await pagePreview.click();
+  });
+
+  
+  Then("I count the list elements", async function () {
+    let listelementFinal = await this.driver.$$(selectors.ListElements);
+    expect(listelementFinal.length).to.equal(0);
+  });
+
+  Then("check the page title {kraken-string} in preview", async function (title) {
+    const pagetitle = await this.driver.$$(selectors.PageTitlePreview);
+    expect(pagetitle).to.not.equal(title);
+  });

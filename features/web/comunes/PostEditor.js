@@ -22,7 +22,8 @@ const ListPostItem = "li.gh-list-row.gh-posts-list-item";
 const OlPostList = "ol.posts-list.gh-list";
 const PostItemTitle = "/html[1]/body[1]/div[2]/div[1]/main[1]/section[1]/section[1]/ol[1]/li[2]/a[1]/h3[1]";
 
-
+const DraftToPublish = "/html[1]/body[1]/div[2]/div[1]/nav[1]/div[1]/section[1]/div[1]/ul[2]/li[1]/div[1]/div[1]/ul[1]/li[1]/a[1]/span[1]"
+const ListElements ="a.gh-list-data.gh-post-list-title"
 
 
 module.exports = {
@@ -47,5 +48,7 @@ module.exports = {
   ListPostItem,
   OlPostList,
   PostItemTitle,
-  NewPost
+  NewPost,
+  DraftToPublish,
+  ListElements
 };

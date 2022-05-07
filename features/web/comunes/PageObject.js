@@ -1,4 +1,6 @@
 const { InputEmail, ButtonLogin, InputPassword } = require("./Login");
+const { NewPage, PageMenu, PagePreview,PageTitlePreview } = require("./PageEditor");
+
 
 const {
   ButtonBack,
@@ -21,7 +23,8 @@ const {
   ListPostItem,
   OlPostList,
   PostItemTitle,
-  NewPost
+  NewPost,DraftToPublish,
+  ListElements
 } = require("./PostEditor");
 
 
@@ -50,4 +53,10 @@ module.exports = {
   FilterByStatus,
   ListPostItem,
   OlPostList,
+  DraftToPublish,
+  NewPage,
+  PageMenu,
+  PagePreview,
+  ListElements,
+  PageTitlePreview
 };
