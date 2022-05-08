@@ -18,6 +18,30 @@ Feature: Create draft post
  # Then I see that the first post in the list has title "postgrupo36"
  # And I wait for 2 seconds
 
+
+Scenario: Delete Draft post 
+Given I navigate to page "http://localhost:2368/ghost/"
+ And I write my email "<ADMIN_EMAIL>"
+ And I enter password "<ADMIN_PASSWORD>"
+ And I click on the login button
+ And I wait for 2 seconds
+ And I click on the new post button
+ And I wait for 2 seconds
+ And I click in back button
+ And I wait for 2 seconds
+ And I filter list by status Draft
+ And I wait for 1 seconds
+ And I click in the first item in the list
+ And I wait for 2 seconds
+ And I open the post setting
+ And I wait for 2 seconds
+ And I delete the post
+ And I wait for 2 seconds
+ Then I count the list elements
+ And I wait for 2 seconds
+   
+
+
 # Scenario: Publish a post in draft status
 # Given I navigate to page "http://localhost:2368/ghost/"
 #   And I write my email "<ADMIN_EMAIL>"
@@ -33,6 +57,73 @@ Feature: Create draft post
 #   And I wait for 2 seconds
 #   And I filter the list by status Published
 #   Then I see that the first post in the list has title "postgrupo36"
+#   And I wait for 2 seconds
+
+# Scenario: Create a scheduled post
+#   Given I navigate to page "http://localhost:2368/ghost/"
+#   And I write my email "<ADMIN_EMAIL>"
+#   And I enter password "<ADMIN_PASSWORD>"
+#   And I click on the login button
+#   And I wait for 2 seconds
+#   When I click on the new post button
+#   And I wait for 2 seconds
+#   And I write "scheduled post" in the post title
+#   And I schedule the new post
+#   And I wait for 2 seconds
+#   And I return to the posts list
+#   And I wait for 2 seconds
+#   And I filter posts by status Scheduled
+#   And I wait for 1 seconds
+#   Then I see that the first post in the list has title "scheduled post"
+#   And I wait for 2 seconds
+
+# Scenario: Create a post with image 
+#   Given I navigate to page "http://localhost:2368/ghost/"
+#   And I write my email "<ADMIN_EMAIL>"
+#   And I enter password "<ADMIN_PASSWORD>"
+#   And I click on the login button
+#   And I wait for 2 seconds
+#   When I click on the new post button
+#   And I wait for 2 seconds
+#   And I write "prueba con imagen" in the post title
+#   And I wait for 4 seconds
+#   And I click on add image 
+#   And I wait for 4 seconds
+#   And I click on unsplasg image 
+#   And I wait for 7 seconds
+#   And I click in back button
+#   And I wait for 2 seconds
+#   And I filter list by status Draft
+#   And I wait for 1 seconds
+#   Then I see that the first post in the list has title "prueba con imagen"
+#   And I wait for 2 seconds
+
+
+
+# Scenario: Create a post with metadata 
+#   Given I navigate to page "http://localhost:2368/ghost/"
+#   And I write my email "<ADMIN_EMAIL>"
+#   And I enter password "<ADMIN_PASSWORD>"
+#   And I click on the login button
+#   And I wait for 2 seconds
+#   When I click on the new post button
+#   And I wait for 2 seconds
+#   And I write "prueba con metadata" in the post title
+#   And I wait for 4 seconds
+#   And I click on add image 
+#   And I wait for 4 seconds
+#   And I click on unsplasg image 
+#   And I wait for 7 seconds
+#   And I open the post setting
+#   And I wait for 2 seconds
+#   And I click on Metadata info
+#   And I wait for 2 seconds
+#   And I write meta title "titulo metadato prueba"
+#   And I wait for 2 seconds
+#   And I write meta description "descipcion metadato prueba"
+#   And I wait for 2 seconds
+#   And I click in back button
+#   Then I see that the first post in the list has title "prueba con metadata"
 #   And I wait for 2 seconds
 
 
@@ -58,6 +149,29 @@ Feature: Create draft post
    
 
 
+# Scenario: Delete Scheduled post 
+# Given I navigate to page "http://localhost:2368/ghost/"
+#  And I write my email "<ADMIN_EMAIL>"
+#  And I enter password "<ADMIN_PASSWORD>"
+#  And I click on the login button
+#  And I wait for 2 seconds
+#  And I click on the new post button
+#  And I wait for 2 seconds
+#  And I click in back button
+#  And I wait for 2 seconds
+#  And I filter posts by status Scheduled
+#  And I wait for 2 seconds  
+#  And I click in the first item in the list
+#  And I wait for 2 seconds
+#  And I open the post setting
+#  And I wait for 2 seconds
+#  And I delete the post
+#  And I wait for 2 seconds
+#  Then I count the list elements
+#  And I wait for 2 seconds
+   
+  
+
 # Scenario: Create Page 
 # Given I navigate to page "http://localhost:2368/ghost/"
 #  And I write my email "<ADMIN_EMAIL>"
@@ -76,6 +190,9 @@ Feature: Create draft post
 #  And I wait for 1 seconds
 #  Then I see that the first post in the list has title "NewPagegrupo36"
 #  And I wait for 2 seconds
+
+
+
 
 #Scenario: see the  preview page 
 #Given I navigate to page "http://localhost:2368/ghost/"
@@ -145,22 +262,22 @@ Feature: Create draft post
 #  Then I count the list elements
 #  And I wait for 2 seconds
  
-#Scenario: Create a tag successfuly
-  #Given I navigate to page "http://localhost:2368/ghost/"
-  #And I write my email "<ADMIN_EMAIL>"
-  #And I enter password "<ADMIN_PASSWORD>"
-  #And I click on the login button
-  #And I wait for 2 seconds
-  #When I click on tags option menu
-  #And I click on the new tag button
-  #And I write tag name "Animals"
-  #And I write tag color "707070"
-  #And I write tag slug "animals"
-  #And I write tag description "Tags for animals"
-  #And I click on the tag save button
-  #And I wait for 2 seconds
-  #And I click on tags option menu
-  #Then I see that tag list has a title name "Animals"
+# Scenario: Create a tag successfuly
+#   Given I navigate to page "http://localhost:2368/ghost/"
+#   And I write my email "<ADMIN_EMAIL>"
+#   And I enter password "<ADMIN_PASSWORD>"
+#   And I click on the login button
+#   And I wait for 2 seconds
+#   When I click on tags option menu
+#   And I click on the new tag button
+#   And I write tag name "Animals"
+#   And I write tag color "707070"
+#   And I write tag slug "animals"
+#   And I write tag description "Tags for animals"
+#   And I click on the tag save button
+#   And I wait for 2 seconds
+#   And I click on tags option menu
+#   Then I see that tag list has a title name "Animals"
 
 #Scenario: Create a member successfuly
   #Given I navigate to page "http://localhost:2368/ghost/"
@@ -246,12 +363,12 @@ Feature: Create draft post
   #And I click on tags option menu
   #Then I see that tag list has a title name "Terrestrial Animals"
 
-  Scenario: View the tag list successfuly
-  Given I navigate to page "http://localhost:2368/ghost/"
-  And I write my email "<ADMIN_EMAIL>"
-  And I enter password "<ADMIN_PASSWORD>"
-  And I click on the login button
-  And I wait for 2 seconds
-  When I click on tags option menu
-  And I wait for 2 seconds
-  Then I see the tags list
+  # Scenario: View the tag list successfuly
+  # Given I navigate to page "http://localhost:2368/ghost/"
+  # And I write my email "<ADMIN_EMAIL>"
+  # And I enter password "<ADMIN_PASSWORD>"
+  # And I click on the login button
+  # And I wait for 2 seconds
+  # When I click on tags option menu
+  # And I wait for 2 seconds
+  # Then I see the tags list

@@ -44,7 +44,12 @@ const {
   MemberListEmpty,
   MemberListExists,
   TagFirstRowList,
-  TagListExists
+  TagListExists,
+  ImageButton,
+  unsplashimage ,
+  metadatabutton,
+  MetaTitle,
+  MetaDescription
 } = require("./PostEditor");
 
 
@@ -98,5 +103,10 @@ module.exports = {
   MemberListEmpty,
   MemberListExists,
   TagFirstRowList,
-  TagListExists
+  TagListExists,
+  ImageButton,
+  unsplashimage,
+  metadatabutton,
+  MetaTitle,
+  MetaDescription
 };

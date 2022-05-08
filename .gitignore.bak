@@ -105,3 +105,4 @@ dist
 
 #kraken runtimefiles
 .kraken
+package-lock.json

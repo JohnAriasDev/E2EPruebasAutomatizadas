@@ -45,6 +45,12 @@ const MemberList = '.ember-view.gh-list-data > .flex.items-center > .w-80 > .ma0
 const MemberErrorEmailMessage = '.form-group.max-width.error.ember-view > p.response';
 const MemberFirstRowList = '.ember-view.gh-list-data';
 const MemberListExists = 'body > div.gh-app > div > main > section > section > div.gh-list-scrolling.gh-list-with-helpsection > table'
+const ImageButton = "button.gh-editor-feature-image-unsplash"
+const unsplashimage = "/html/body/div[3]/div[2]/div[1]/div[1]/div[1]/section/div[1]/a[1]/div/div/div[2]/a"
+const metadatabutton = ".nav-list-item" 
+const MetaTitle= "input.post-setting-meta-title"
+const MetaDescription = "textarea.post-setting-meta-description"
+
 
 module.exports = {
   ButtonBack,
@@ -89,5 +95,10 @@ module.exports = {
   MemberFirstRowList,
   MemberListExists,
   TagFirstRowList,
-  TagListExists
+  TagListExists,
+  ImageButton,
+  unsplashimage,
+  metadatabutton,
+  MetaTitle,
+  MetaDescription
 };

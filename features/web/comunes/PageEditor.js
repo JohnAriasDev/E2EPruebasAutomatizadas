@@ -7,6 +7,7 @@ module.exports = {
     PageMenu,
     NewPage,
     PagePreview ,
-    PageTitlePreview };
+    PageTitlePreview
+    };
   
     

@@ -57,6 +57,42 @@ Given("I write my email {kraken-string}", async function (email) {
     return await buttonPublishConfirmation.click();
   });*/
   
+  When("I click on add image", async function () {
+    const imageButton = await this.driver.$(selectors.ImageButton);
+    return await imageButton.click();
+  
+  });
+
+    
+  When("I click on unsplasg image", async function () {
+    const Unsplashimage = await this.driver.$(selectors.unsplashimage);
+    return await Unsplashimage.click();
+  
+  });
+
+  
+
+
+  When("I click on Metadata info", async function () {
+    const metadataButton = await this.driver.$$(selectors.metadatabutton);
+    const postTitle = await metadataButton[0];
+    return await postTitle.click();
+  });
+
+  Given("I write meta title {kraken-string}", async function (title) {
+    let metaTitle = await this.driver.$(selectors.MetaTitle);
+    return await metaTitle.setValue(title);
+  });
+
+  Given("I write meta description {kraken-string}", async function (title) {
+    let metaDescription= await this.driver.$(selectors.MetaDescription);
+    return await metaDescription.setValue(title);
+  });
+
+
+  
+  
+
 
   When("I schedule the new post", async function () {
     let spanSettingsMenu = await this.driver.$(selectors.SpanSettingsMenu);
