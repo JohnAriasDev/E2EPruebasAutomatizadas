@@ -1,6 +1,25 @@
 {
   "dependencies": {
     "chai": "^4.3.6",
+    "cucumber": "^6.0.7",
+    "g": "^2.0.1",
     "kraken-node": "^1.0.24"
-  }
+  },
+  "name": "e2epruebasautomatizadas",
+  "description": "| Apellidos | Nombres | Correo @uniandes | \r | --------- | --------| ---------------- | \r | Pérez Cerón   |  Daniel Camilo         | dc.perezc1@uniandes.edu.co  |  \r | Rojas Estrada |  Cristian Camilo       |  c.rojase@uniandes.edu.co   |  \r | Cortes Poveda   |  Jeferson         | j.cortesp2@uniandes.edu.co  |  \r | Arias Ariza   |  John Alexander        |  ja.ariasa1@uniandes.edu.co |",
+  "version": "1.0.0",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/JohnAriasDev/E2EPruebasAutomatizadas.git"
+  },
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/JohnAriasDev/E2EPruebasAutomatizadas/issues"
+  },
+  "homepage": "https://github.com/JohnAriasDev/E2EPruebasAutomatizadas#readme"
 }
