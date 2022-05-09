@@ -104,4 +104,13 @@ dentro del proyecto descargado abra el archivo properties.json, alli ingrese la 
 
 ## Kraken Ventajas y Desventajas
 ### Ventajas
-
+ * Permite especificar escenarios de prueba por medio de notación similar al lenguaje natural, lo que permite aun sin conocer el detalle tecnico, validar que tipo de prueba se va a ejecutar y los pasos a ejecutar.
+ * El modelo Given When Then permite estructurar los escenarios de prueba de forma que podamos a una accion o evento generado poder validar el oraculo de pruebas.
+ * Al finalizar la ejecución de  prueba genera información acertada a nivel de snapshots y reportes, tiempos de ejecucion y detalles.
+ * con el patron page object permite rehusar mucha funcionalidad por lo que la implementación de nuevos escenarios de prueba reduce el tiempo de desarrollo.
+ 
+ ### Desventajas
+ * Presenta errores de compatibilidad en su instalación y ejecución dependiendo el Sistema operativo desde el cual se use.
+ * para windows no permite ejecutar varios archivos de feature.
+ * no cuenta con mucha documentación tecnica, lo que al encontrar un error, no es facil de solverntarlo
+  
