@@ -51,7 +51,14 @@ dentro del proyecto descargado abra el archivo properties.json, alli ingrese la 
 * instale las dependencias con el comando  ```npm install``` desde una terminal 
 * ejecutar las pruebas con kraken  ``` npx kraken-node run```
 
+### Cypress 
 
+* Instalar Cypress
+
+* Clone el proyecto y cambie los valores correspondientes en la ruta E2ECypress/cypress/fixtures/datos.json
+
+* en la ruta E2ECypress/ instalar las dependencias con el comando ```npm install```
+* para correr las pruebas  ir a la ruta E2ECypress/ y digitar el comando ``` cypress run --headless```
 
 ## Funcionalidades
 * Logueo : Permite iniciar sesión como administrador de aplicacion, suministrando un usuario y contraseña valida.
