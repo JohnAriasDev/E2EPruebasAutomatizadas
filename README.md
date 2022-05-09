@@ -10,6 +10,18 @@
 
 
 ## Prerequisitos
+
+### Instalar Ghost de manera local
+siguiendo la documentación oficial ```https://ghost.org/docs/install/local/```
+o  siguiendo los pasos descritos en el codelab ``` https://misovirtual.virtual.uniandes.edu.co/codelabs/ghost-local-deployment/index.html```
+
+Al finalizar la instalación se habilitara la aplicación en la url ```http://localhost:2368``` 
+
+Ingrese a la url ```http://localhost:2368/ghost/``` 
+diligencie el  formulario para crear un nuevo Sitio en ghost.
+tenga especial atencion en los campos "Email Address" y en el campo "Password" ya que estas credenciales las usaremos para la ejecucion de pruebas y deberan ingresar en el archivo ```kraken/properties.json```
+
+
 Descargar e instalar version de Node JS superior >= 12
 https://nodejs.org/en/
 
@@ -21,14 +33,24 @@ Para mac  seguir los pasos del siguiente video
 https://www.youtube.com/watch?v=daVygBAm1zs
 
 para linux
-sudo apt-get update
-sudo apt-get install android-tools-adb
+```sudo apt-get update``` 
 
-Instalar Ghost de manera local
+```sudo apt-get install android-tools-adb```
+
 
 
 ## Pasos para instalación
-Clone el repositorio con git clone https://github.com/JohnAriasDev/E2EPruebasAutomatizadas.git o descargue el zip y descomprímalo.
+
+### Kraken 
+
+* Instalar kraken ``` npm install kraken-node -g```
+
+* Clone el repositorio con el comando ```git clone https://github.com/JohnAriasDev/E2EPruebasAutomatizadas.git``` o descargue el zip y descomprímalo.
+dentro del proyecto descargado abra el archivo properties.json, alli ingrese la informacion del usuario y contraseña  administrador creado para ghost 
+
+* instale las dependencias con el comando  ```npm install``` desde una terminal 
+* ejecutar las pruebas con kraken  ``` npx kraken-node run```
+
 
 
 ## Funcionalidades
@@ -80,4 +102,15 @@ Clone el repositorio con git clone https://github.com/JohnAriasDev/E2EPruebasAut
 | 20  |  View the tag list successfuly  |  realiza logueo exitoso,  se ingresa al menu tag , se visualiza la lista de tags creados en cualquier estado |
 
 
-
+## Kraken Ventajas y Desventajas
+### Ventajas
+ * Permite especificar escenarios de prueba por medio de notación similar al lenguaje natural, lo que permite aun sin conocer el detalle tecnico, validar que tipo de prueba se va a ejecutar y los pasos a ejecutar.
+ * El modelo Given When Then permite estructurar los escenarios de prueba de forma que podamos a una accion o evento generado poder validar el oraculo de pruebas.
+ * Al finalizar la ejecución de  prueba genera información acertada a nivel de snapshots y reportes, tiempos de ejecucion y detalles.
+ * con el patron page object permite rehusar mucha funcionalidad por lo que la implementación de nuevos escenarios de prueba reduce el tiempo de desarrollo.
+ 
+ ### Desventajas
+ * Presenta errores de compatibilidad en su instalación y ejecución dependiendo el Sistema operativo desde el cual se use.
+ * para windows no permite ejecutar varios archivos de feature.
+ * no cuenta con mucha documentación tecnica, lo que al encontrar un error, no es facil de solverntarlo
+  
