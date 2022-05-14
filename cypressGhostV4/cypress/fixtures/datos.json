@@ -3,7 +3,8 @@
         "email":"miso@gmail.com",
         "password":"miso123456"
     },
-    "url":"http://localhost:3004/",
+    "url4":"http://localhost:3004/",
+    "url3":"http://localhost:3004/",
     "dir":"ghost/",
     "scenarios":{
         "S1":"createDraftPost",
@@ -27,5 +28,6 @@
         "S19":"editTagSuccesfuly",
         "S20":"deleteTag"
     },
-    "version":"V4"
+    "version4":"V4",
+    "version3":"V3"
 }
