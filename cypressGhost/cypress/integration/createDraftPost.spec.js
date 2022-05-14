@@ -3,7 +3,7 @@ import LoginSelector from "../support/PageObjects/loginSelector";
 import PostSelector from "../support/PageObjects/postSelector"
 import { faker } from '@faker-js/faker';
 
-describe("create a draft", () => {
+describe("create a draft post", () => {
     let data;
     const newPost = faker.commerce.productName();
     const loginSelector = new LoginSelector();

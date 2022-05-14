@@ -3,6 +3,6 @@
         "email":"miso@gmail.com",
         "password":"miso123456"
     },
-    "url":"http://localhost:3004/",
+    "url":"http://localhost:2368/",
     "dir":"ghost/"
 }
