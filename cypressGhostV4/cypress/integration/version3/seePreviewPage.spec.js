@@ -34,30 +34,30 @@ describe("see preview page", () => {
   });
   //@When
   it("see preview page", () => {  
-    cy.visit(data.url4+data.dir);
-    postSelector.getScreenShot(data.version4, data.scenarios.S10, index++);
+    cy.visit(data.url3+data.dir);
+    postSelector.getScreenShot(data.version3, data.scenarios.S10, index++);
     loginSelector.getEmailLogin().type(data.login.email);
-    postSelector.getScreenShot(data.version4, data.scenarios.S10, index++);
+    postSelector.getScreenShot(data.version3, data.scenarios.S10, index++);
     loginSelector.getPasswordLogin().type(data.login.password);
-    postSelector.getScreenShot(data.version4, data.scenarios.S10, index++);
+    postSelector.getScreenShot(data.version3, data.scenarios.S10, index++);
     loginSelector.getButtonLogin().click();
-    postSelector.getScreenShot(data.version4, data.scenarios.S10, index++);
+    postSelector.getScreenShot(data.version3, data.scenarios.S10, index++);
     postSelector.getPageOption().click();
-    postSelector.getScreenShot(data.version4, data.scenarios.S10, index++);
+    postSelector.getScreenShot(data.version3, data.scenarios.S10, index++);
     postSelector.getNewPageButton().click({force: true});
-    postSelector.getScreenShot(data.version4, data.scenarios.S10, index++);
+    postSelector.getScreenShot(data.version3, data.scenarios.S10, index++);
     postSelector.getTextAreaTitle().type(newPost);
-    postSelector.getScreenShot(data.version4, data.scenarios.S10, index++);
+    postSelector.getScreenShot(data.version3, data.scenarios.S10, index++);
     postSelector.getEditor().type(faker.lorem.paragraph());
-    postSelector.getScreenShot(data.version4, data.scenarios.S10, index++);
+    postSelector.getScreenShot(data.version3, data.scenarios.S10, index++);
     postSelector.getPreview().click();
-    postSelector.getScreenShot(data.version4, data.scenarios.S10, index++);
+    postSelector.getScreenShot(data.version3, data.scenarios.S10, index++);
     postSelector.getUrlPreviewPage().children('.db').then(($text)=>{
       urlPreview = $text.text();
-      urlPreview = urlPreview.replace("http://localhost:2368/", data.url4);      
+      urlPreview = urlPreview.replace("http://localhost:2368/", data.url3);      
       cy.visit(urlPreview);
     });
-    postSelector.getScreenShot(data.version4, data.scenarios.S10, index++);
+    postSelector.getScreenShot(data.version3, data.scenarios.S10, index++);
     //@then
     postSelector.getTitlePreview().should('to.contain', newPost)
   });

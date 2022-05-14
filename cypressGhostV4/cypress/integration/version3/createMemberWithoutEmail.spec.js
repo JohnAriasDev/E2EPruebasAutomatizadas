@@ -23,24 +23,24 @@ describe("create a member without email", () => {
   });
   //@When
   it("Create a member without email", () => {
-    cy.visit(data.url4+data.dir);
-    postSelector.getScreenShot(data.version4, data.scenarios.S15, index++);
+    cy.visit(data.url3+data.dir);
+    postSelector.getScreenShot(data.version3, data.scenarios.S15, index++);
     loginSelector.getEmailLogin().type(data.login.email);
-    postSelector.getScreenShot(data.version4, data.scenarios.S15, index++);
+    postSelector.getScreenShot(data.version3, data.scenarios.S15, index++);
     loginSelector.getPasswordLogin().type(data.login.password);
-    postSelector.getScreenShot(data.version4, data.scenarios.S15, index++);
+    postSelector.getScreenShot(data.version3, data.scenarios.S15, index++);
     loginSelector.getButtonLogin().click();
-    postSelector.getScreenShot(data.version4, data.scenarios.S15, index++);
+    postSelector.getScreenShot(data.version3, data.scenarios.S15, index++);
     postSelector.getMemberOption().first().click({force: true});
-    postSelector.getScreenShot(data.version4, data.scenarios.S15, index++);
+    postSelector.getScreenShot(data.version3, data.scenarios.S15, index++);
     postSelector.getNewMemberButton().first().click();
-    postSelector.getScreenShot(data.version4, data.scenarios.S15, index++);
+    postSelector.getScreenShot(data.version3, data.scenarios.S15, index++);
     postSelector.getMemberNameInput().type(name,{force: true});
-    postSelector.getScreenShot(data.version4, data.scenarios.S15, index++);
+    postSelector.getScreenShot(data.version3, data.scenarios.S15, index++);
     postSelector.getMemberNoteInput().type(faker.lorem.paragraph()); 
-    postSelector.getScreenShot(data.version4, data.scenarios.S15, index++);
+    postSelector.getScreenShot(data.version3, data.scenarios.S15, index++);
     postSelector.getSaveButton().click()
-    postSelector.getScreenShot(data.version4, data.scenarios.S15, index++);
+    postSelector.getScreenShot(data.version3, data.scenarios.S15, index++);
     //@then
     postSelector.getSaveButton().children('span').should('to.contain', "Retry");
     postSelector.getErrorEmailMember().should('to.contain', "Please enter an email.");

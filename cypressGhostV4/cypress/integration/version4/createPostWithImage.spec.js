@@ -22,27 +22,27 @@ describe("create a post with image", () => {
   //@When
   it("create a post with image", () => {
     cy.visit(data.url4+data.dir);
-    postSelector.getScreenShot(data.version, data.scenarios.S4, index++);
+    postSelector.getScreenShot(data.version4, data.scenarios.S4, index++);
     loginSelector.getEmailLogin().type(data.login.email);
-    postSelector.getScreenShot(data.version, data.scenarios.S4, index++);
+    postSelector.getScreenShot(data.version4, data.scenarios.S4, index++);
     loginSelector.getPasswordLogin().type(data.login.password);
-    postSelector.getScreenShot(data.version, data.scenarios.S4, index++);
+    postSelector.getScreenShot(data.version4, data.scenarios.S4, index++);
     loginSelector.getButtonLogin().click();
-    postSelector.getScreenShot(data.version, data.scenarios.S4, index++);
+    postSelector.getScreenShot(data.version4, data.scenarios.S4, index++);
     postSelector.getNewPostButton().click();
-    postSelector.getScreenShot(data.version, data.scenarios.S4, index++);
+    postSelector.getScreenShot(data.version4, data.scenarios.S4, index++);
     postSelector.getUnplashImageButton().click();
-    postSelector.getScreenShot(data.version, data.scenarios.S4, index++);
+    postSelector.getScreenShot(data.version4, data.scenarios.S4, index++);
     postSelector.getUnplashImageInsert().click();
-    postSelector.getScreenShot(data.version, data.scenarios.S4, index++);
+    postSelector.getScreenShot(data.version4, data.scenarios.S4, index++);
     postSelector.getTextAreaTitle().type(newPost);
-    postSelector.getScreenShot(data.version, data.scenarios.S4, index++);
+    postSelector.getScreenShot(data.version4, data.scenarios.S4, index++);
     postSelector.getParagraphInput().type(faker.lorem.paragraph());
-    postSelector.getScreenShot(data.version, data.scenarios.S4, index++);
+    postSelector.getScreenShot(data.version4, data.scenarios.S4, index++);
     postSelector.getBackButton().click();
-    postSelector.getScreenShot(data.version, data.scenarios.S4, index++);
+    postSelector.getScreenShot(data.version4, data.scenarios.S4, index++);
     postSelector.getDrafOption().click();
-    postSelector.getScreenShot(data.version, data.scenarios.S4, index++);
+    postSelector.getScreenShot(data.version4, data.scenarios.S4, index++);
   //@Then
     postSelector.getTitleFirstElementTitle().should('to.contain',newPost);
 

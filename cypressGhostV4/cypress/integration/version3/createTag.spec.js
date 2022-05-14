@@ -22,32 +22,32 @@ describe("create a tag", () => {
   });
   //@When
   it("Create a tag", () => {
-    cy.visit(data.url4+data.dir);
-    postSelector.getScreenShot(data.version4, data.scenarios.S13, index++);
+    cy.visit(data.url3+data.dir);
+    postSelector.getScreenShot(data.version3, data.scenarios.S13, index++);
     loginSelector.getEmailLogin().type(data.login.email);
-    postSelector.getScreenShot(data.version4, data.scenarios.S13, index++);
+    postSelector.getScreenShot(data.version3, data.scenarios.S13, index++);
     loginSelector.getPasswordLogin().type(data.login.password);
-    postSelector.getScreenShot(data.version4, data.scenarios.S13, index++);
+    postSelector.getScreenShot(data.version3, data.scenarios.S13, index++);
     loginSelector.getButtonLogin().click();
-    postSelector.getScreenShot(data.version4, data.scenarios.S13, index++);
+    postSelector.getScreenShot(data.version3, data.scenarios.S13, index++);
     postSelector.getTagOption().click();
-    postSelector.getScreenShot(data.version4, data.scenarios.S13, index++);
+    postSelector.getScreenShot(data.version3, data.scenarios.S13, index++);
     postSelector.getNewTagButton().click({force: true});
-    postSelector.getScreenShot(data.version4, data.scenarios.S13, index++);
+    postSelector.getScreenShot(data.version3, data.scenarios.S13, index++);
     postSelector.getTagNameInput().type(newPost);
-    postSelector.getScreenShot(data.version4, data.scenarios.S13, index++);
+    postSelector.getScreenShot(data.version3, data.scenarios.S13, index++);
     postSelector.getTagSlugInput().click();
-    postSelector.getScreenShot(data.version4, data.scenarios.S13, index++);
+    postSelector.getScreenShot(data.version3, data.scenarios.S13, index++);
     postSelector.getTagDescInput().type(faker.lorem.paragraph());
-    postSelector.getScreenShot(data.version4, data.scenarios.S13, index++);
+    postSelector.getScreenShot(data.version3, data.scenarios.S13, index++);
     postSelector.getTagColorInput().type("707070");
-    postSelector.getScreenShot(data.version4, data.scenarios.S13, index++);
+    postSelector.getScreenShot(data.version3, data.scenarios.S13, index++);
     postSelector.getSaveButton().click()
-    postSelector.getScreenShot(data.version4, data.scenarios.S13, index++);
+    postSelector.getScreenShot(data.version3, data.scenarios.S13, index++);
     postSelector.getSaveButton().children('span').should('to.contain', "Saved");
-    postSelector.getScreenShot(data.version4, data.scenarios.S13, index++);
+    postSelector.getScreenShot(data.version3, data.scenarios.S13, index++);
     postSelector.getTagOption().first().click();
-    postSelector.getScreenShot(data.version4, data.scenarios.S13, index++);
+    postSelector.getScreenShot(data.version3, data.scenarios.S13, index++);
     //@Then
     postSelector.getTagTitles().each(($el, index, $list) =>{
       let aux = ''

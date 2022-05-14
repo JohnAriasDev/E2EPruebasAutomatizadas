@@ -21,32 +21,32 @@ describe("create a page", () => {
   });
   //@When
   it("Create a page", () => {    
-    cy.visit(data.url4+data.dir);
-    postSelector.getScreenShot(data.version4, data.scenarios.S9, index++);
+    cy.visit(data.url3+data.dir);
+    postSelector.getScreenShot(data.version3, data.scenarios.S9, index++);
     loginSelector.getEmailLogin().type(data.login.email);
-    postSelector.getScreenShot(data.version4, data.scenarios.S9, index++);
+    postSelector.getScreenShot(data.version3, data.scenarios.S9, index++);
     loginSelector.getPasswordLogin().type(data.login.password);
-    postSelector.getScreenShot(data.version4, data.scenarios.S9, index++);
+    postSelector.getScreenShot(data.version3, data.scenarios.S9, index++);
     loginSelector.getButtonLogin().click();
-    postSelector.getScreenShot(data.version4, data.scenarios.S9, index++);
+    postSelector.getScreenShot(data.version3, data.scenarios.S9, index++);
     postSelector.getPageOption().click();
-    postSelector.getScreenShot(data.version4, data.scenarios.S9, index++);
+    postSelector.getScreenShot(data.version3, data.scenarios.S9, index++);
     postSelector.getNewPageButton().click({force: true});
-    postSelector.getScreenShot(data.version4, data.scenarios.S9, index++);
+    postSelector.getScreenShot(data.version3, data.scenarios.S9, index++);
     postSelector.getTextAreaTitle().type(newPost);
-    postSelector.getScreenShot(data.version4, data.scenarios.S9, index++);
+    postSelector.getScreenShot(data.version3, data.scenarios.S9, index++);
     postSelector.getEditor().type(faker.lorem.paragraph());
-    postSelector.getScreenShot(data.version4, data.scenarios.S9, index++);
+    postSelector.getScreenShot(data.version3, data.scenarios.S9, index++);
     postSelector.getBackButton().click();
-    postSelector.getScreenShot(data.version4, data.scenarios.S9, index++);
+    postSelector.getScreenShot(data.version3, data.scenarios.S9, index++);
     postSelector.waitForList();
-    postSelector.getScreenShot(data.version4, data.scenarios.S9, index++);
+    postSelector.getScreenShot(data.version3, data.scenarios.S9, index++);
     postSelector.getFilterOptions().first().click({force: true});
-    postSelector.getScreenShot(data.version4, data.scenarios.S9, index++);
+    postSelector.getScreenShot(data.version3, data.scenarios.S9, index++);
     postSelector.getFilterDraft().click({force: true});
-    postSelector.getScreenShot(data.version4, data.scenarios.S9, index++);
+    postSelector.getScreenShot(data.version3, data.scenarios.S9, index++);
     postSelector.waitForList();
-    postSelector.getScreenShot(data.version4, data.scenarios.S9, index++);
+    postSelector.getScreenShot(data.version3, data.scenarios.S9, index++);
   //@Then
     postSelector.getTitleFirstElementPages().should('to.contain',newPost);
 

@@ -4,7 +4,7 @@
         "password":"miso123456"
     },
     "url4":"http://localhost:3004/",
-    "url3":"http://localhost:3004/",
+    "url3":"http://localhost:3003/",
     "dir":"ghost/",
     "scenarios":{
         "S1":"createDraftPost",

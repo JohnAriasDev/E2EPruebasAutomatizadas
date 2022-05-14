@@ -21,36 +21,36 @@ describe("delete a page", () => {
   });
   //@When
   it("delete a page", () => {
-    cy.visit(data.url4+data.dir);
-    postSelector.getScreenShot(data.version4, data.scenarios.S12, index++);
+    cy.visit(data.url3+data.dir);
+    postSelector.getScreenShot(data.version3, data.scenarios.S12, index++);
     loginSelector.getEmailLogin().type(data.login.email);
-    postSelector.getScreenShot(data.version4, data.scenarios.S12, index++);
+    postSelector.getScreenShot(data.version3, data.scenarios.S12, index++);
     loginSelector.getPasswordLogin().type(data.login.password);
-    postSelector.getScreenShot(data.version4, data.scenarios.S12, index++);
+    postSelector.getScreenShot(data.version3, data.scenarios.S12, index++);
     loginSelector.getButtonLogin().click();
-    postSelector.getScreenShot(data.version4, data.scenarios.S12, index++);
+    postSelector.getScreenShot(data.version3, data.scenarios.S12, index++);
     postSelector.getPageOption().click();
-    postSelector.getScreenShot(data.version4, data.scenarios.S12, index++);
+    postSelector.getScreenShot(data.version3, data.scenarios.S12, index++);
     postSelector.getNewPageButton().click({ force: true });
-    postSelector.getScreenShot(data.version4, data.scenarios.S12, index++);
+    postSelector.getScreenShot(data.version3, data.scenarios.S12, index++);
     postSelector.getTextAreaTitle().type(newPost);
-    postSelector.getScreenShot(data.version4, data.scenarios.S12, index++);
+    postSelector.getScreenShot(data.version3, data.scenarios.S12, index++);
     postSelector.getEditor().type(faker.lorem.paragraph());
-    postSelector.getScreenShot(data.version4, data.scenarios.S12, index++);
+    postSelector.getScreenShot(data.version3, data.scenarios.S12, index++);
     postSelector.getBackButton().click();
     postSelector.waitForList();
-    postSelector.getScreenShot(data.version4, data.scenarios.S12, index++);
+    postSelector.getScreenShot(data.version3, data.scenarios.S12, index++);
     postSelector.getTablePage().its("length").as("initialCount");
-    postSelector.getScreenShot(data.version4, data.scenarios.S12, index++);
+    postSelector.getScreenShot(data.version3, data.scenarios.S12, index++);
     postSelector.getFirstElementPages().click({force: true});
-    postSelector.getScreenShot(data.version4, data.scenarios.S12, index++);
+    postSelector.getScreenShot(data.version3, data.scenarios.S12, index++);
     postSelector.getSettings().click();
-    postSelector.getScreenShot(data.version4, data.scenarios.S12, index++);
+    postSelector.getScreenShot(data.version3, data.scenarios.S12, index++);
     postSelector.getDeleteButton().click();
-    postSelector.getScreenShot(data.version4, data.scenarios.S12, index++);
+    postSelector.getScreenShot(data.version3, data.scenarios.S12, index++);
     postSelector.getDeleteButtonConfirm().click();
     postSelector.waitForList();
-    postSelector.getScreenShot(data.version4, data.scenarios.S12, index++);
+    postSelector.getScreenShot(data.version3, data.scenarios.S12, index++);
     postSelector.getTablePage().its("length").as("nextCount");
     //@Then
     cy.get("@initialCount").then((initial) => {

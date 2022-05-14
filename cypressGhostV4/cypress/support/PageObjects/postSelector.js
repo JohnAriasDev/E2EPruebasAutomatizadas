@@ -181,7 +181,7 @@ class PostSelector{
     }
     getScreenShot(version, escenario, index){
         cy.wait(500);
-        cy.screenshot(`../screenchot/cypress/${version}/${escenario}-${index}`, {overwrite: true});
+        cy.screenshot(`${escenario}-${index}`, {overwrite: true});
     }
 }
 
