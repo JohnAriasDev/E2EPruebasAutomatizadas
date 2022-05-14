@@ -2,7 +2,7 @@ Feature: Create a post with metadata
 
 @user1 @web
 Scenario: Create a post with metadata 
-  Given I navigate to page "http://localhost:2368/ghost/"
+  Given I navigate to page "<URL_GHOST>"
   And I write my email "<ADMIN_EMAIL>"
   And I enter password "<ADMIN_PASSWORD>"
   And I click on the login button

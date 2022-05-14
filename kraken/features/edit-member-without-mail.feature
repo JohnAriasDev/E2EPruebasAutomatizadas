@@ -2,7 +2,7 @@ Feature: Edit a member without email
 
 @user1 @web
   Scenario: Edit a member without email
-  Given I navigate to page "http://localhost:2368/ghost/"
+  Given I navigate to page "<URL_GHOST>"
   And I write my email "<ADMIN_EMAIL>"
   And I enter password "<ADMIN_PASSWORD>"
   And I click on the login button
