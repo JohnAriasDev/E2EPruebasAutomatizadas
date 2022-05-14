@@ -1,0 +1,31 @@
+{
+    "login":{
+        "email":"miso@gmail.com",
+        "password":"miso123456"
+    },
+    "url":"http://localhost:3004/",
+    "dir":"ghost/",
+    "scenarios":{
+        "S1":"createDraftPost",
+        "S2":"publishDraftPost",
+        "S3":"createSchedulePost",
+        "S4":"createPostWithImage",
+        "S5":"createPostWithMetadata",
+        "S6":"deleteDraftPost",
+        "S7":"deleteSchedulePost",
+        "S8":"deleteLatestPost",
+        "S9":"createPage",
+        "S10":"seePreviewPage",
+        "S11":"publisPage",
+        "S12":"deletePage",
+        "S13":"createTagSuccessfuly",
+        "S14":"createMemberSuccessfuly",
+        "S15":"createMemberWithoutEmail",
+        "S16":"editMemberSuccessfuly",
+        "S17":"editMemberWithoutEmail",
+        "S18":"deleteMember",
+        "S19":"editTagSuccesfuly",
+        "S20":"deleteTag"
+    },
+    "version":"V4"
+}
