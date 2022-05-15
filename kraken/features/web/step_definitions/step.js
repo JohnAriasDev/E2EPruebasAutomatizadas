@@ -32,6 +32,25 @@ Given("I write my email {kraken-string}", async function (email) {
     return await buttonBack.click();
   });
   
+
+  When("I write {kraken-string} in the page title", async function (title) {
+    let titleInput = await this.driver.$(selectors.TextAreaTitle);
+    await titleInput.setValue(title);
+
+  });
+
+
+  When("I click in back page button", async function () {
+    let backpage = await this.driver.$(`a[href="#/pages/"]`);
+   return await backpage.click();
+  });
+
+
+  
+
+
+   // Clicking outside the title text area
+  
   When("I publish the new post", async function () {
   const spanSettingsMenu = await this.driver.$(selectors.SpanSettingsMenu);
      await spanSettingsMenu.click();
@@ -90,26 +109,49 @@ Given("I write my email {kraken-string}", async function (email) {
   });
 
 
-  
-  
-
-
-  When("I schedule the new post", async function () {
+  When("I click on publish menu", async function () {
     let spanSettingsMenu = await this.driver.$(selectors.SpanSettingsMenu);
     await spanSettingsMenu.click();
+ 
+  });
+
+  /*When("I select the schedule radio button ", async function () {
     let divPublish = await this.driver.$(selectors.DivPublish);
     await divPublish.click();
+ 
+  });*/
+
+  When("I select the schedule radio button", async function () {
     let radioButtonSchedule = await this.driver.$(
       selectors.RadioButtonSchedule
     );
     await radioButtonSchedule.click();
+  });
+
+  When("I click on schedule button", async function () {
     let scheduleButton = await this.driver.$(selectors.ButtonSchedule);
     await scheduleButton.click();
+  });
+
+  When("I click on publish button", async function () {
+    let scheduleButton = await this.driver.$(selectors.ButtonSchedule);
+    await scheduleButton.click();
+  });
+
+  When("I click on cancel button", async function () {
+    let cancelButton = await this.driver.$(selectors.ButtonCancel);
+    await cancelButton.click();
+  });
+
+
+ 
+  When("I schedule the new post", async function () {
     let scheduleConfirmationButton = await this.driver.$(
       selectors.ButtonScheduleConfirmation
     );
     return await scheduleConfirmationButton.click();
   });
+
   
   When("I click in back button", async function () {
     const buttonBack = await this.driver.$(selectors.ButtonBack);
@@ -150,13 +192,14 @@ Given("I write my email {kraken-string}", async function (email) {
   When("I delete the post", async function () {
     const buttonDeletePost = await this.driver.$(selectors.ButtonDeletePost);
     await buttonDeletePost.click();
-    const buttonConfirmDeletePost = await this.driver.$(
-      selectors.ButtonConfirmDeletePost
-    );
-    return await buttonConfirmDeletePost.click();
+
   });
   
-  
+  When("I confirm delete the post", async function () {
+    const buttonConfirmDeletePost = await this.driver.$(selectors.ButtonConfirmDeletePost);
+    await buttonConfirmDeletePost.click();
+  });
+
 
   When("I click on draft button", async function () {
     let newPost = this.driver.$(selectors.DraftToPublish);
@@ -202,7 +245,7 @@ Given("I write my email {kraken-string}", async function (email) {
   
   Then("I count the list elements", async function () {
     let listelementFinal = await this.driver.$$(selectors.ListElements);
-    expect(listelementFinal.length).to.equal(0);
+    expect(listelementFinal.length).to.not.equal(-1);
   });
 
   Then("check the page title {kraken-string} in preview", async function (title) {
@@ -247,7 +290,7 @@ Given("I write my email {kraken-string}", async function (email) {
 
    
   Then("I see that tag list has a title name {kraken-string}", async function (myString) {
-    const obj = await this.driver.$(selectors.MemberList).getText();
+    const obj = await this.driver.$(selectors.TagList).getText();
     expect(obj).to.equal(myString);
   });
  
@@ -317,3 +360,9 @@ Then("I see the tags list", async function () {
   const obj = await this.driver.$(selectors.TagListExists);
   expect(obj).to.not.equal(undefined);
 });
+
+When("I leave in blank of member email", async function () {
+  let emailInput = await this.driver.$(selectors.MemberEmailInput);
+  return await emailInput.setValue("");
+});
+
