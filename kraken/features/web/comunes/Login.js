@@ -1,6 +1,6 @@
 const InputEmail = "#ember7"//"input.email";
-const ButtonLogin = "#ember11"; //"button.login"
-const InputPassword = "#ember9";// input.password
+const ButtonLogin = ".login"; //"button.login"
+const InputPassword = ".password.ember-text-field.gh-input.ember-view";// input.password
 
 module.exports = {
   InputEmail,

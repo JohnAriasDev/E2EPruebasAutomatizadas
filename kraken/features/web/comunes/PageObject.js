@@ -4,6 +4,8 @@ const { NewPage, PageMenu, PagePreview,PageTitlePreview } = require("./PageEdito
 
 const {
   ButtonBack,
+  ButtonBackPages,
+  ButtonCancel,
   DivPublish,
   TextAreaTitle,
   ButtonPublish,
@@ -59,6 +61,8 @@ module.exports = {
   InputPassword,
   NewPost,
   ButtonBack,
+  ButtonCancel,
+  ButtonBackPages,
   DivPublish,
   TextAreaTitle,
   ButtonPublish,

@@ -1,5 +1,5 @@
-const PageMenu = "/html[1]/body[1]/div[2]/div[1]/nav[1]/div[1]/section[1]/div[1]/ul[2]/li[2]/a[1]"; 
-const NewPage = "a.gh-btn-primary";
+const PageMenu = "a[href='#/pages/']"; 
+const NewPage = "a[href='#/editor/page/']"; 
 const PagePreview = "button.gh-editor-preview-trigger"
 const PageTitlePreview = "h1.article-title"
 
