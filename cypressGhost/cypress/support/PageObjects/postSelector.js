@@ -1,4 +1,13 @@
 class PostSelector{
+    getButtonPostList(){        
+        return cy.get('a[href="#/posts/"]', { timeout: 20000 })
+    }
+    getButtonPostListDraft(){        
+        return cy.get('a[href="#/posts/?type=draft"]', { timeout: 20000 })
+    }
+    getButtonPostSettings(){        
+        return cy.get('button.post-settings', { timeout: 20000 })
+    }
     getNewPostButton(){
         return cy.get('a.gh-nav-new-post', { timeout: 20000 })
     }    

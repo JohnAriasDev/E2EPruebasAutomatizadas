@@ -35,7 +35,7 @@ describe("publish draft post", () => {
     postSelector.getScreenShot(data.version3, data.scenarios.S2, index++);
     postSelector.getParagraphInput().type(faker.lorem.paragraph());
     postSelector.getScreenShot(data.version3, data.scenarios.S2, index++);
-    postSelector.getBackButton().click();
+    postSelector.getButtonPostList().first().click();
     postSelector.getScreenShot(data.version3, data.scenarios.S2, index++);
     postSelector.getDrafOption().click();
     postSelector.getScreenShot(data.version3, data.scenarios.S2, index++);
@@ -45,11 +45,11 @@ describe("publish draft post", () => {
     postSelector.getScreenShot(data.version3, data.scenarios.S2, index++);
     postSelector.getPublishButton().click();
     postSelector.getScreenShot(data.version3, data.scenarios.S2, index++);
-    postSelector.getPublishButtonConfirm().click();
+    //postSelector.getPublishButtonConfirm().click();
     postSelector.getScreenShot(data.version3, data.scenarios.S2, index++);
-    postSelector.getPublishButtonConfirm().should('not.exist');
+    //postSelector.getPublishButtonConfirm().should('not.exist');
     postSelector.getScreenShot(data.version3, data.scenarios.S2, index++);
-    postSelector.getBackButton().click();
+    postSelector.getButtonPostListDraft().first().click();
     postSelector.getScreenShot(data.version3, data.scenarios.S2, index++);
     postSelector.getPublishOption().click();
     postSelector.getScreenShot(data.version3, data.scenarios.S2, index++);

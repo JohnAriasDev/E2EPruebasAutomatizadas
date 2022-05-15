@@ -35,7 +35,7 @@ describe("create a draft post", () => {
     postSelector.getScreenShot(data.version3, data.scenarios.S1, index++);
     postSelector.getParagraphInput().type(faker.lorem.paragraph());
     postSelector.getScreenShot(data.version3, data.scenarios.S1, index++);
-    postSelector.getBackButton().click();
+    postSelector.getButtonPostList().first().click();
     postSelector.getScreenShot(data.version3, data.scenarios.S1, index++);
     postSelector.getDrafOption().click();
     postSelector.getScreenShot(data.version3, data.scenarios.S1, index++);

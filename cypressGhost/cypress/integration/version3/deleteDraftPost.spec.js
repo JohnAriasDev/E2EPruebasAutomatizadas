@@ -35,7 +35,7 @@ describe("delete a draft post", () => {
     postSelector.getScreenShot(data.version3, data.scenarios.S6, index++);
     postSelector.getParagraphInput().type(faker.lorem.paragraph());
     postSelector.getScreenShot(data.version3, data.scenarios.S6, index++);
-    postSelector.getBackButton().click();
+    postSelector.getButtonPostList().first().click();
     postSelector.getScreenShot(data.version3, data.scenarios.S6, index++);
     postSelector.getDrafOption().click();
     postSelector.getScreenShot(data.version3, data.scenarios.S6, index++);
@@ -43,7 +43,7 @@ describe("delete a draft post", () => {
     postSelector.getScreenShot(data.version3, data.scenarios.S6, index++);
     postSelector.getFirstElementTable().first().click();
     postSelector.getScreenShot(data.version3, data.scenarios.S6, index++);
-    postSelector.getSettings().click();
+    postSelector.getButtonPostSettings().click();
     postSelector.getScreenShot(data.version3, data.scenarios.S6, index++);
     postSelector.getDeleteButton().click();
     postSelector.getScreenShot(data.version3, data.scenarios.S6, index++);

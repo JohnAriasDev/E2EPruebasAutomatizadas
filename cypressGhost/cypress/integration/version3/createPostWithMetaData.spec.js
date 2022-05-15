@@ -31,15 +31,15 @@ describe("create a post with metadata", () => {
     postSelector.getScreenShot(data.version3, data.scenarios.S5, index++);
     postSelector.getNewPostButton().click();
     postSelector.getScreenShot(data.version3, data.scenarios.S5, index++);
-    postSelector.getUnplashImageButton().click();
+    //postSelector.getUnplashImageButton().click();
     postSelector.getScreenShot(data.version3, data.scenarios.S5, index++);
-    postSelector.getUnplashImageInsert().click();
+    //postSelector.getUnplashImageInsert().click();
     postSelector.getScreenShot(data.version3, data.scenarios.S5, index++);
     postSelector.getTextAreaTitle().type(newPost);
     postSelector.getScreenShot(data.version3, data.scenarios.S5, index++);
-    postSelector.getParagraphInput().type(faker.lorem.paragraph());
+    postSelector.getParagraphInput().type(faker.lorem.paragraph(1));
     postSelector.getScreenShot(data.version3, data.scenarios.S5, index++);
-    postSelector.getSettings().click();
+    postSelector.getButtonPostSettings().click();
     postSelector.getScreenShot(data.version3, data.scenarios.S5, index++);
     postSelector.getMetadataButton().click();
     postSelector.getScreenShot(data.version3, data.scenarios.S5, index++);
@@ -47,7 +47,7 @@ describe("create a post with metadata", () => {
     postSelector.getScreenShot(data.version3, data.scenarios.S5, index++);
     postSelector.getMetadataDesc().type(faker.lorem.paragraph());
     postSelector.getScreenShot(data.version3, data.scenarios.S5, index++);
-    postSelector.getBackButton().click();
+    postSelector.getButtonPostList().first().click({force:true});
     postSelector.getScreenShot(data.version3, data.scenarios.S5, index++);
     postSelector.getDrafOption().click();
     postSelector.getScreenShot(data.version3, data.scenarios.S5, index++);
