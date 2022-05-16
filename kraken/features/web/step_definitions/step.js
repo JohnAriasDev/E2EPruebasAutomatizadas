@@ -1,6 +1,8 @@
 const selectors = require("../comunes/PageObject");
 const { Given, When, Then} = require("@cucumber/cucumber");
 const expect = require('chai').expect;
+const basePath = './screenshots/';
+const fs = require('fs');
 
 
 Given("I write my email {kraken-string}", async function (email) {
@@ -366,3 +368,37 @@ When("I leave in blank of member email", async function () {
   return await emailInput.setValue("");
 });
 
+When('I take a screenshot of scenario and step number  {string}', async function( stepNumber){
+  let featureName = featureFileInPath('./features')[0].split(".")[0];
+  let dir = `./screenshots/${featureName}.feature`;
+  createFolderIfDoesNotExists(dir)
+  await new Promise(r => setTimeout(r, 1000 * 1));
+      return await this.driver.saveScreenshot(`${dir}/${featureName}.feature-${stepNumber}.png`);
+  
+});
+
+
+
+function createFolderIfDoesNotExists(path) {
+  if (!fs.existsSync(path)) {
+      fs.mkdirSync(path, { recursive: true });
+  }
+}
+
+
+function createFolderIfDoesNotExists(path) {
+  if (!fs.existsSync(path)) {
+      fs.mkdirSync(path, { recursive: true });
+  }
+}
+
+function featureFileInPath(path) {
+  let filesInFeaturePath = filesInPath(path);
+  return filesInFeaturePath.filter((fileName) => {
+      return fileName.match(/\.feature$/);
+  });
+}
+
+function filesInPath(path) {
+  return fs.readdirSync(path);
+}
