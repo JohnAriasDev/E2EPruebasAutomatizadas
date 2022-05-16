@@ -64,6 +64,7 @@ dentro del proyecto descargado abra el archivo properties.json, alli ingrese la 
 
 * Primero se debe crear una carpeta donde se desea crear el proyecto de Resemble.
 * Luego debe crear un proyecto con el comando ```npm init``` donde se va a solicitar alguna informacion como la siguiente:
+* ![image](https://user-images.githubusercontent.com/2495279/168512508-2692567b-bf55-4f5b-a1fe-37e98d988632.png)
 * Luego, en la ruta del proyecto, manualmente se deben crear 2 archivos: El primero ```index.js``` que hace referencia a la lógica que se quiere probar.
 El segundo ```config.json``` que tiene toda la parametrización de las pruebas. 
 * Luego debe instalar Playwright, en la carpeta del proyecto, con el comando ```npm install playwright``` la cual se demora un poco.
