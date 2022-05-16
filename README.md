@@ -60,6 +60,16 @@ dentro del proyecto descargado abra el archivo properties.json, alli ingrese la 
 * en la ruta E2ECypress/ instalar las dependencias con el comando ```npm install```
 * para correr las pruebas  ir a la ruta E2ECypress/ y digitar el comando ``` cypress run --headless```
 
+### Resemble JS 
+
+* Primero se debe crear una carpeta donde se desea crear el proyecto de Resemble.
+* Luego debe crear un proyecto con el comando ```npm init``` donde se va a solicitar alguna informacion como la siguiente:
+* Luego, en la ruta del proyecto, manualmente se deben crear 2 archivos: El primero ```index.js``` que hace referencia a la lógica que se quiere probar.
+El segundo ```config.json``` que tiene toda la parametrización de las pruebas. 
+* Luego debe instalar Playwright, en la carpeta del proyecto, con el comando ```npm install playwright``` la cual se demora un poco.
+* Luego debe instalar Resemble JS, en la carpeta del proyecto, con el comando ```npm install resemblejs``` la cual instala las dependecias necesarias para el proyecto.
+* Finalmente se ejecuta el comando ```node index.js``` para desplegar las pruebas.
+Una vez realizado el proceso en el proyecto creará una carpeta "results" donde se encuentra el arhivo "reporte.html"y se podran validar las VRT.
 ## Funcionalidades
 * Logueo : Permite iniciar sesión como administrador de aplicacion, suministrando un usuario y contraseña valida.
 * Creación post borrador :Permite la creación de un post borrador ingresando un título y descripcion.
