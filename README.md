@@ -52,13 +52,27 @@ dentro del proyecto descargado abra el archivo properties.json, alli ingrese la 
 * ejecutar las pruebas con kraken  ``` npx kraken-node run```
 
 ### Cypress 
+* clone el proyecto o decarque el .zip
+* las Pruebas de las dos versiones se ejecutaran al tiempo por favor tener las dos versiones 4.44 y 3.42 de ghost corriendo loacalmente
+#### Instalar Ghost con docker compose
+* siguiendo la documentacion de https://docs.docker.com/compose/install/ instale docker y docker compose
+* sitúese en la carpeta principal del proyecto y corra el comando ```docker-compose up```
+* esto desplegara ghost 4.44 en el puerto 3004 y ghost 3.42 en el puerto 3003
+* en las dos versiones entre a la ruta /ghost y registrese con
+* email: miso@gmail.com
+* contraseña: miso123456
+* porfavor seguir el proceso de registro hasta que este en la ventana del dashboard en las dos versiones
 
-* Instalar Cypress
+#### Instalar Cypress
 
-* Clone el proyecto y cambie los valores correspondientes en la ruta E2ECypress/cypress/fixtures/datos.json
-
-* en la ruta E2ECypress/ instalar las dependencias con el comando ```npm install```
-* para correr las pruebas  ir a la ruta E2ECypress/ y digitar el comando ``` cypress run --headless```
+* si se registro con otro email y contraseña cambie los valores correspondientes en la ruta cypressGhost/cypress/fixtures/datos.json
+* si las versiones de ghost estan corriendo en otro puerto cambie los valores correspondientes en la ruta cypressGhost/cypress/fixtures/datos.json
+* instalar Cypress con el comando ```npm install cypress --save-dev```
+* en la ruta cypressGhost/ instalar las dependencias con el comando ```npm install```
+* para correr las pruebas  ir a la ruta cypressGhost/ y digitar el comando ``` cypress run --headless```
+* o puedo abrir el entorno grafico de cypress con el comando ```cypress open``` y desde alli abrir la carpeta cypressGhost/
+* se correran 25 pruebas 20 con la version 4.44 y 5 con la version 3.42
+* las imagenes se guardaran en la carpeta cypressGhost/cypress/Screenshots
 
 ## Funcionalidades
 * Logueo : Permite iniciar sesión como administrador de aplicacion, suministrando un usuario y contraseña valida.

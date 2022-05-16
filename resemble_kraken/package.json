@@ -1,0 +1,15 @@
+{
+  "name": "resemble_kraken",
+  "version": "1.0.0",
+  "description": "VRT for kraken",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "JefCortes",
+  "license": "ISC",
+  "dependencies": {
+    "playwright": "^1.22.0",
+    "resemblejs": "^4.1.0"
+  }
+}
