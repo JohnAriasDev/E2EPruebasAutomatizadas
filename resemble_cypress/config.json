@@ -1,7 +1,7 @@
 {
     "url":"https://monitor177.github.io/color-palette/",
     "browsers":["chromium", "webkit", "firefox"],
-	"scenarios":["createDraftPost", "createPostWithMetaData", "createSchedulePost", "deleteDraftPost", "publishDraftPost"],
+	"scenarios":["createDraftPost", "createPostWithMetadata", "createSchedulePost", "deleteDraftPost", "publishDraftPost"],
     "options":{
         "output": {
             "errorColor": {
