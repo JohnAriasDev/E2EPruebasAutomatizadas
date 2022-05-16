@@ -74,6 +74,7 @@ dentro del proyecto descargado abra el archivo properties.json, alli ingrese la 
 * se correran 25 pruebas 20 con la version 4.44 y 5 con la version 3.42
 * las imagenes se guardaran en la carpeta cypressGhost/cypress/Screenshots
 
+
 ### Resemble JS 
 
 * Primero se debe crear una carpeta donde se desea crear el proyecto de Resemble.
@@ -85,6 +86,7 @@ El segundo ```config.json``` que tiene toda la parametrización de las pruebas.
 * Luego debe instalar Resemble JS, en la carpeta del proyecto, con el comando ```npm install resemblejs``` la cual instala las dependecias necesarias para el proyecto.
 * Finalmente se ejecuta el comando ```node index.js``` para desplegar las pruebas.
 Una vez realizado el proceso en el proyecto creará una carpeta "results" donde se encuentra el arhivo "reporte.html"y se podran validar las VRT.
+
 ## Funcionalidades
 * Logueo : Permite iniciar sesión como administrador de aplicacion, suministrando un usuario y contraseña valida.
 * Creación post borrador :Permite la creación de un post borrador ingresando un título y descripcion.
