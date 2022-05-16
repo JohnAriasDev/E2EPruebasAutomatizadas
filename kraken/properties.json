@@ -1,6 +1,6 @@
 {
-  "ADMIN_EMAIL": "ja.ariasa1@uniandes.edu.co", 
-  "ADMIN_PASSWORD": "Fox2006....",
+  "ADMIN_EMAIL": "", 
+  "ADMIN_PASSWORD": "",
   "URL_GHOST": "http://localhost:2368/ghost/"
   
   }
