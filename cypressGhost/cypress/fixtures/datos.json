@@ -11,7 +11,7 @@
         "S2":"publishDraftPost",
         "S3":"createSchedulePost",
         "S4":"createPostWithImage",
-        "S5":"createPostWithMetadata",
+        "S5":"createPostWithMetaData",
         "S6":"deleteDraftPost",
         "S7":"deleteSchedulePost",
         "S8":"deleteLatestPost",
