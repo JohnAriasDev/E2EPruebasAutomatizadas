@@ -192,6 +192,21 @@ class PostSelector{
         cy.wait(500);
         cy.screenshot(`${escenario}-${index}`, {overwrite: true});
     }
+    getInputTime(){
+        return cy.get('.gh-date-time-picker-time', { timeout: 20000 }).children('input');
+    }
+    getErrorInputTime(){
+        return cy.get('.gh-date-time-picker-error', { timeout: 20000 });
+    }
+    getInputDate(){
+        return cy.get('.gh-date-time-picker-date', { timeout: 20000 }).children('input');
+    }
+    getInputExcerpt(){
+        return cy.get('#custom-excerpt', { timeout: 20000 });
+    }
+    getErrorInputExcerpt(){
+        return cy.get('#custom-excerpt', { timeout: 20000 }).parent('.form-group').children('p.response');
+    }
 }
 
 export default PostSelector

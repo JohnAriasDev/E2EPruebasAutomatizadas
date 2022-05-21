@@ -9,6 +9,9 @@ class LoginSelector {
     getButtonLogin(){
         return cy.get('button.login', { timeout: 5000 })
     }
+    getErrorMessage(){
+        return cy.get('p.main-error')
+    }
 
 }
 
