@@ -206,6 +206,9 @@ class PostSelector{
     }
     getErrorInputExcerpt(){
         return cy.get('#custom-excerpt', { timeout: 20000 }).parent('.form-group').children('p.response');
+    }    
+    getMemberListNoName(){
+        return cy.get('.ember-view.gh-list-data > div > div > h3', { timeout: 20000 });
     }
 }
 
