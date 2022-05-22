@@ -37,6 +37,19 @@ const TagMenuManage = 'a[href="#/tags/"]';
 const TagFirstRowList = '.ember-view.gh-list-data.gh-tag-list-title.gh-list-cellwidth-70';
 const TagList = '.ember-view.gh-list-data.gh-tag-list-title.gh-list-cellwidth-70 > h3.gh-tag-list-name';
 const TagListExists = 'body > div.gh-app > div > main > section > section > ol'
+const TagErrorNameMessage = ".error > .response";
+const TagErrorNameMessage2 = ".gh-tag-settings-multiprop > div > .error > p:nth-child(2)";
+const TagErrorNameMessage3 = ".gh-tag-settings-multiprop > div > .error > p:nth-child(1)";
+const TagErrorDescription = ".no-margin.form-group.error.ember-view > p.response"
+const TagMetadataButton =".gh-btn.gh-btn-expand"
+const TagTwitterButton = "/html/body/div[2]/div/main/section/form/div[2]/section/div[2]/div[1]/button"
+const TagCodeInjectionButton ="/html/body/div[2]/div/main/section/form/div[2]/section/div[4]/div[1]/button"
+const TagMetaTitle ="#meta-title"
+const TagMetaDesc ="/html[1]/body[1]/div[2]/div[1]/main[1]/section[1]/form[1]/div[2]/section[1]/div[1]/div[2]/div[1]/div[1]/div[1]/div[1]/div[1]/div[2]/textarea[1]"
+const TagMetaCanonical ="#canonical-url"
+const TagCodeInjectionHead ="/html/body/div[2]/div/main/section/form/div[2]/section/div[4]/div[2]/div/div/div/div[1]/div/div/div[6]/div[1]/div/div/div/div[5]/div/pre"
+const TagTwitterTitleInput ="#twitter-title"
+const TagTwitterDescInput = "/html/body/div[2]/div/main/section/form/div[2]/section/div[2]/div[2]/div/div/div/div/div[1]/div[3]/textarea"
 
 const MemberNewTagButton = '.ember-view.gh-btn.gh-btn-primary';
 const MemberNameInput = '#member-name';
@@ -86,6 +99,8 @@ module.exports = {
   TagColorInput,
   TagSlugInput,
   TagDescriptionInput,
+  TagTwitterTitleInput,
+  TagTwitterDescInput,
   TagSaveButton,
   TagMenuManage,
   TagList,
@@ -104,5 +119,16 @@ module.exports = {
   unsplashimage,
   metadatabutton,
   MetaTitle,
-  MetaDescription
+  MetaDescription,
+  TagErrorNameMessage,
+  TagErrorNameMessage2,
+  TagErrorDescription,
+  TagErrorNameMessage3,
+  TagMetadataButton,
+  TagTwitterButton,
+  TagMetaTitle,
+  TagMetaDesc,
+  TagMetaCanonical,
+  TagCodeInjectionButton,
+  TagCodeInjectionHead
 };

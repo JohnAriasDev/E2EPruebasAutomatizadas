@@ -32,6 +32,8 @@ const {
   TagColorInput,
   TagSlugInput,
   TagDescriptionInput,
+  TagTwitterTitleInput,
+  TagTwitterDescInput,
   TagSaveButton,
   TagMenuManage,
   TagList,
@@ -51,7 +53,18 @@ const {
   unsplashimage ,
   metadatabutton,
   MetaTitle,
-  MetaDescription
+  MetaDescription,
+  TagErrorNameMessage,
+  TagErrorNameMessage2,
+  TagErrorDescription,
+  TagErrorNameMessage3,
+  TagMetadataButton,
+  TagTwitterButton,
+  TagMetaTitle,
+  TagMetaDesc,
+  TagMetaCanonical,
+  TagCodeInjectionButton,
+  TagCodeInjectionHead
 } = require("./PostEditor");
 
 
@@ -93,6 +106,8 @@ module.exports = {
   TagColorInput,
   TagSlugInput,
   TagDescriptionInput,
+  TagTwitterTitleInput,
+  TagTwitterDescInput,
   TagSaveButton,
   TagMenuManage,
   TagList,
@@ -112,5 +127,16 @@ module.exports = {
   unsplashimage,
   metadatabutton,
   MetaTitle,
-  MetaDescription
+  MetaDescription,
+  TagErrorNameMessage,
+  TagErrorNameMessage2,
+  TagErrorDescription,
+  TagErrorNameMessage3,
+  TagMetadataButton,
+  TagTwitterButton,
+  TagMetaTitle,
+  TagMetaDesc,
+  TagMetaCanonical,
+  TagCodeInjectionButton,
+  TagCodeInjectionHead
 };
