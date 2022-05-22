@@ -26,7 +26,20 @@
         "S17":"editMemberWithoutEmail",
         "S18":"deleteMember",
         "S19":"editTagSuccesfuly",
-        "S20":"deleteTag"
+        "S20":"deleteTag",
+        "S30":"createMemberWithoutName",
+        "S31":"createMemberwithName5",
+        "S32":"createMemberwithName150",
+        "S33":"createMemberWithoutEmail",
+        "S34":"createMemberWithoutAtSignEmail",
+        "S35":"createMemberWithDoubleAtSignEmail",
+        "S36":"createMemberWithOnlyDomainEmail",
+        "S37":"createMemberWithEmail75",
+        "S38":"createMemberWithEmail60",
+        "S39":"createMemberWithwithSpecialCharacterEmail",
+        "S40":"createMemberWithoutDotSignEmail",
+        "S41":"createMemberWithDoubleSufixDomainEmail",
+        "S42":"createMemberWithwithSpecialCharacterName"
     },
     "version4":"V4",
     "version3":"V3"
