@@ -210,6 +210,19 @@ class PostSelector{
     getMemberListNoName(){
         return cy.get('.ember-view.gh-list-data > div > div > h3', { timeout: 20000 });
     }
+    getMemberLabelInput(){
+        return cy.get('.ember-power-select-trigger-multiple-input', { timeout: 20000 });
+    }
+    getMemberLabelAddBtn(){
+        return cy.get('.ember-power-select-option', { timeout: 20000 });
+    }   
+    getMemberLabelList(){
+        return cy.get('.ember-power-select-multiple-options.sortable-objects.ember-view', { timeout: 20000 });
+    }
+    getMemberNoteUseMessage(){
+        return cy.get('.form-group.mb0.gh-member-note.ember-view > p:nth-child(4) > span', { timeout: 20000 });
+    }
+    
 }
 
 export default PostSelector

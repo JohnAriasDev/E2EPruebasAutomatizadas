@@ -3,7 +3,7 @@
         "email":"miso@gmail.com",
         "password":"miso123456"
     },
-    "url4":"http://localhost:3004/",
+    "url4":"http://localhost:3400/",
     "url3":"http://localhost:3003/",
     "dir":"ghost/",
     "scenarios":{
@@ -39,7 +39,13 @@
         "S39":"createMemberWithwithSpecialCharacterEmail",
         "S40":"createMemberWithoutDotSignEmail",
         "S41":"createMemberWithDoubleSufixDomainEmail",
-        "S42":"createMemberWithwithSpecialCharacterName"
+        "S42":"createMemberWithwithSpecialCharacterName",
+        "S43":"createMemberNoClickAddLabel",
+        "S44":"createMemberOneLabelAndNoClickAddLabel",
+        "S45":"createMemberWithLabel",
+        "S46":"createMemberWithNote1Character",
+        "S47":"createMemberWithNote499Character",
+        "S48":"createMemberWithNote500Character"
     },
     "version4":"V4",
     "version3":"V3"
