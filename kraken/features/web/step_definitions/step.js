@@ -3,6 +3,7 @@ const { Given, When, Then} = require("@cucumber/cucumber");
 const expect = require('chai').expect;
 const basePath = './screenshots/';
 const fs = require('fs');
+const utilsFaker = require("../step_definitions/utilsDataGeneration");
 
 
 Given("I write my email {kraken-string}", async function (email) {
@@ -104,6 +105,8 @@ Given("I write my email {kraken-string}", async function (email) {
     let metaTitle = await this.driver.$(selectors.MetaTitle);
     return await metaTitle.setValue(title);
   });
+
+
 
   Given("I write meta description {kraken-string}", async function (title) {
     let metaDescription= await this.driver.$(selectors.MetaDescription);
@@ -270,19 +273,157 @@ Given("I write my email {kraken-string}", async function (email) {
     return await obj.setValue(myString);
   });
 
+  When("I write tag name apriori {kraken-string}", async function (myString) {
+    const obj = await this.driver.$(selectors.TagNameInput);
+    const validateString = new utilsFaker(myString);
+    const randomValue = validateString.validateTypeParam;
+    return await obj.setValue(randomValue);
+  });
+
+  When("I write tagMeta name apriori {kraken-string} with length {kraken-string}", async function (myString,maxleng) {
+    const obj = await this.driver.$(selectors.TagMetaTitle);
+    const validateString = new utilsFaker(myString);
+    const randomValue = validateString.validateTypeParam;
+    const valorstring = randomValue.substring(0, maxleng);
+    return await obj.setValue(valorstring);
+  });
+  
+  When("I write tagMeta description apriori {kraken-string} with length {kraken-string}", async function (myString,maxleng) {
+    const obj = await this.driver.$(selectors.TagMetaDesc);
+    const validateString = new utilsFaker(myString);
+    const randomValue = validateString.validateTypeParam;
+    const valorstring = randomValue.substring(0, maxleng);
+    return await obj.setValue(valorstring);
+  });
+
+  When("I write tagCanonicalUrl description apriori {kraken-string} with length {kraken-string}", async function (myString,maxleng) {
+    const obj = await this.driver.$(selectors.TagMetaCanonical);
+    const validateString = new utilsFaker(myString);
+    const randomValue = validateString.validateTypeParam;
+    const valorstring = randomValue.substring(0, maxleng);
+    return await obj.setValue(valorstring);
+  });
+
+
+  When("I write tag header apriori {kraken-string} with length {kraken-string}", async function (myString,maxleng) {
+    const obj = await this.driver.$(selectors.TagCodeInjectionHead);
+    const validateString = new utilsFaker(myString);
+    const randomValue = validateString.validateTypeParam;
+    const valorstring = randomValue.substring(0, maxleng);
+    return await obj.setValue(valorstring);
+  });
+
+  When("I write tag header apriori {kraken-string} with length {kraken-string}", async function (myString,maxleng) {
+    const obj = await this.driver.$(selectors.TagCodeInjectionHead);
+    const validateString = new utilsFaker(myString);
+    const randomValue = validateString.validateTypeParam;
+    const valorstring = randomValue.substring(0, maxleng);
+    return await obj.setValue(valorstring);
+  });
+
+  When("create tag with  twitter apriori {kraken-string} with length {kraken-string}", async function (myString,maxleng) {
+    const obj = await this.driver.$(selectors.TagCodeInjectionHead);
+    const validateString = new utilsFaker(myString);
+    const randomValue = validateString.validateTypeParam;
+    const valorstring = randomValue.substring(0, maxleng);
+    return await obj.setValue(valorstring);
+  });
+
+  
+
+  
+  When("I write tag name {kraken-string} with length {kraken-string}", async function (myString, maxleng) {
+    const obj = this.driver.$(selectors.TagNameInput);
+    const valorstring = myString.substring(0, maxleng);
+    return await obj.setValue(valorstring.padEnd(maxleng,'A'));
+  });
+
   When("I write tag color {kraken-string}", async function (myString) {
     const obj = await this.driver.$(selectors.TagColorInput);
     return await obj.setValue(myString);
   });
+  
 
+When("I write tag color apriori {kraken-string}", async function (myString) {
+    const obj = await this.driver.$(selectors.TagColorInput);
+    const validateString = new utilsFaker(myString);
+    const randomValue = validateString.validateTypeParam;
+    return await obj.setValue(randomValue);
+//    if (this.myString.startsWith("#")) {
+  //    return await this.usePoolApriori(this.myString);
+    //return await obj.setValue(myString);
+   
+});
+  
+When("I write tag slug {kraken-string} with length {kraken-string}", async function (myString, maxleng) {
+  const obj = this.driver.$(selectors.TagSlugInput);
+  const valorstring = myString.substring(0, maxleng);
+  return await obj.setValue(valorstring.padEnd(maxleng,'A'));
+});
+  
   When("I write tag slug {kraken-string}", async function (myString) {
     const obj = await this.driver.$(selectors.TagSlugInput);
     return await obj.setValue(myString);
   });
 
+  When("I write tag slug apriori {kraken-string}", async function (myString) {
+    const obj = await this.driver.$(selectors.TagSlugInput);
+    const validateString = new utilsFaker(myString);
+    const randomValue = validateString.validateTypeParam;
+    return await obj.setValue(randomValue);
+  });
+
   When("I write tag description {kraken-string}", async function (myString) {
     const obj = await this.driver.$(selectors.TagDescriptionInput);
     return await obj.setValue(myString);
+  });
+  
+  When("I write tag description apriori {kraken-string}", async function (myString) {
+    const obj = await this.driver.$(selectors.TagDescriptionInput);
+    const validateString = new utilsFaker(myString);
+    const randomValue = validateString.validateTypeParam;
+    return await obj.setValue(randomValue);
+  });
+
+  When("I write tag twitter title apriori {kraken-string} with length {kraken-string}", async function (myString, maxleng) {
+    const obj =  this.driver.$(selectors.TagTwitterTitleInput);
+    const validateString = new utilsFaker(myString);
+    const randomValue = validateString.validateTypeParam;
+    const valorstringdesc = randomValue.substring(0, maxleng);
+    return await obj.setValue(valorstringdesc.padEnd(maxleng,'A')); 
+  });
+
+  
+  When("I write tag twitter title apriori {kraken-string}", async function (myString) {
+    const obj =  this.driver.$(selectors.TagTwitterTitleInput);
+    const validateString = new utilsFaker(myString);
+    const randomValue = validateString.validateTypeParam;
+    return await obj.setValue(randomValue); 
+  });
+
+  When("I write tag twitter description apriori {kraken-string}", async function (myString) {
+    const obj =  this.driver.$(selectors.TagTwitterDescInput);
+    const validateString = new utilsFaker(myString);
+    const randomValue = validateString.validateTypeParam;
+    return await obj.setValue(randomValue); 
+  });
+
+
+
+  When("I write tag twitter description apriori {kraken-string} with length {kraken-string}", async function (myString, maxleng) {
+    const obj =  this.driver.$(selectors.TagTwitterDescInput);
+    const validateString = new utilsFaker(myString);
+    const randomValue = validateString.validateTypeParam;
+    const valorstringdesc = randomValue.substring(0, maxleng);
+    return await obj.setValue(valorstringdesc.padEnd(maxleng,'A')); 
+  });
+  
+  When("I write tag description apriori {kraken-string} with length {kraken-string}", async function (myString, maxleng) {
+    const obj =  this.driver.$(selectors.TagDescriptionInput);
+    const validateString = new utilsFaker(myString);
+    const randomValue = validateString.validateTypeParam;
+    const valorstringdesc = randomValue.substring(0, maxleng);
+    return await obj.setValue(valorstringdesc.padEnd(maxleng,'A')); 
   });
 
   When("I click on the tag save button", async function () {
@@ -290,10 +431,29 @@ Given("I write my email {kraken-string}", async function (email) {
     return await obj.click();
   });
 
-   
+  
   Then("I see that tag list has a title name {kraken-string}", async function (myString) {
     const obj = await this.driver.$(selectors.TagList).getText();
     expect(obj).to.equal(myString);
+  });
+
+  Then("I see the button saved", async function () {
+    const obj = await this.driver.$(selectors.TagSaveButton).getText();
+    expect(obj).to.equal("Saved");
+  });
+ 
+  Then("I see the button Retry", async function () {
+    const obj = await this.driver.$(selectors.TagSaveButton).getText();
+    expect(obj).to.equal("Retry");
+  });
+ 
+ 
+ 
+
+  Then("I see that tag list has a title name {kraken-string} with length {kraken-string}", async function (myString,maxleng) {
+    const obj = await this.driver.$(selectors.TagList).getText();
+    const valorstring = myString.substring(0, maxleng);
+    expect(valorstring.padEnd(maxleng,'A')).to.equal(valorstring.padEnd(maxleng,'A'));
   });
  
   
@@ -332,7 +492,32 @@ Given("I write my email {kraken-string}", async function (email) {
     const obj = await this.driver.$(selectors.MemberErrorEmailMessage).getText();
     expect(obj).to.equal(myString);
 });
-  
+
+Then("I see error message {kraken-string}", async function (myString) {
+  const obj = await this.driver.$(selectors.TagErrorNameMessage).getText();
+  expect(obj).to.equal(myString);
+});
+
+
+Then("I see error message2 {kraken-string}", async function (myString) {
+  const obj = await this.driver.$(selectors.TagErrorNameMessage2).getText();
+  expect(obj).to.equal(myString);
+});  
+
+
+Then("I see error message3 {kraken-string}", async function (myString) {
+  const obj = await this.driver.$(selectors.TagErrorDescription).getText();
+  expect(obj).to.equal(myString);
+});  
+
+Then("I see error message4 {kraken-string}", async function (myString) {
+  const obj = await this.driver.$(selectors.TagErrorNameMessage3).getText();
+  expect(obj).to.equal(myString);
+});  
+
+
+
+
 Given("I click on member option menu list", async function () {
   const obj = this.driver.$(selectors.MemberMenuManage);
   return await obj.click();
@@ -342,6 +527,26 @@ When("I see a first list of members", async function () {
   const obj = this.driver.$(selectors.MemberFirstRowList);
   return await obj.click();
 });
+
+When("I click on the Meta data expand button", async function () {
+  const obj = this.driver.$(selectors.TagMetadataButton);
+  return await obj.click();
+});
+
+
+When("I click on the twitter card expand button", async function () {
+  const obj = this.driver.$(selectors.TagTwitterButton);
+  return await obj.click();
+});
+
+
+
+When("I click on the Code injection expand button", async function () {
+  const obj = this.driver.$(selectors.TagCodeInjectionButton);
+  return await obj.click();
+});
+
+
 
 Then("I see the member list", async function () {
   const obj = await this.driver.$(selectors.MemberListExists);
@@ -402,3 +607,4 @@ function featureFileInPath(path) {
 function filesInPath(path) {
   return fs.readdirSync(path);
 }
+
