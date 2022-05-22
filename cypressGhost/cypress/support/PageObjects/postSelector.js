@@ -74,6 +74,12 @@ class PostSelector{
     getMetadataButton(){
         return cy.get('ul.nav-list.nav-list-block>li', { timeout: 20000 }).eq(0).first();
     }
+    getTwitterButton(){
+        return cy.get('ul.nav-list.nav-list-block>li', { timeout: 20000 }).eq(1).first();
+    }
+    getFacebookButton(){
+        return cy.get('ul.nav-list.nav-list-block>li', { timeout: 20000 }).eq(2).first();
+    }
     getMetadataTitle(){
         return cy.get('input[name="post-setting-meta-title"]', { timeout: 20000 });
     }
@@ -151,6 +157,9 @@ class PostSelector{
     }  
     getTagTitles(){
         return cy.get('h3.gh-tag-list-name', { timeout: 20000 });
+    }     
+    getPostTitles(){
+        return cy.get('h3.gh-content-entry-title', { timeout: 20000 });
     }
     getMemberOption(){
         return cy.get('a[href="#/members/"]', { timeout: 20000 });
@@ -192,6 +201,55 @@ class PostSelector{
         cy.wait(500);
         cy.screenshot(`${escenario}-${index}`, {overwrite: true});
     }
+    getInputTime(){
+        return cy.get('.gh-date-time-picker-time', { timeout: 20000 }).children('input');
+    }
+    getErrorInputTime(){
+        return cy.get('.gh-date-time-picker-error', { timeout: 20000 });
+    }
+    getInputDate(){
+        return cy.get('.gh-date-time-picker-date', { timeout: 20000 }).children('input');
+    }
+    getInputExcerpt(){
+        return cy.get('#custom-excerpt', { timeout: 20000 });
+    }
+    getErrorInputExcerpt(){
+        return cy.get('#custom-excerpt', { timeout: 20000 }).parent('.form-group').children('p.response');
+    }
+    getUrlInput(){
+        return cy.get('input[name="post-setting-canonicalUrl"]', { timeout: 20000 });
+    }
+    getErrorUrlInput(){
+        return cy.get('input[name="post-setting-canonicalUrl"]', { timeout: 20000 }).parent('.form-group').children('p.response');
+    }
+    getTwitterTitleInput(){
+        return cy.get('input[name="post-setting-twitter-title"]', { timeout: 20000 });
+    }
+    getTwitterErrorTitleInput(){
+        return cy.get('input[name="post-setting-twitter-title"]', { timeout: 20000 }).parent('.form-group').children('p.response');
+    }
+    getTwitterDescriptionInput(){
+        return cy.get('textarea[name="post-setting-twitter-description"]', { timeout: 20000 });
+    }
+    getTwitterErrorDescriptionInput(){
+        return cy.get('textarea[name="post-setting-twitter-description"]', { timeout: 20000 }).parent('.form-group').children('p.response');
+    }
+    getFacebookTitleInput(){
+        return cy.get('input[name="post-setting-og-title"]', { timeout: 20000 });
+    }
+    getFacebookErrorTitleInput(){
+        return cy.get('input[name="post-setting-og-title"]', { timeout: 20000 }).parent('.form-group').children('p.response');
+    }
+    getFacebookDescriptionInput(){
+        return cy.get('textarea[name="post-setting-og-description"]', { timeout: 20000 });
+    }
+    getFacebookErrorDescriptionInput(){
+        return cy.get('textarea[name="post-setting-og-description"]', { timeout: 20000 }).parent('.form-group').children('p.response');
+    }
+    getTitleElementPost(index){
+        return cy.get('.posts-list.gh-list>li', { timeout: 20000 }).eq(index).children('.gh-post-list-title').children('.gh-content-entry-title');
+    }
+
 }
 
 export default PostSelector
