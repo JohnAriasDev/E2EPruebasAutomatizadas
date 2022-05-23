@@ -54,12 +54,13 @@ describe("create a page", () => {
         //postSelector.getScreenShot(data.version4, data.scenarios.S9, index++);
         postSelector.getSettings().click({force: true});
         //postSelector.getScreenShot(data.version4, data.scenarios.S9, index++);
-        postSelector.getPageURL().clear().type($el.page_url);
+        postSelector.getPageURL().clear().type($el.page_url, { parseSpecialCharSequences: false });
         //postSelector.getScreenShot(data.version4, data.scenarios.S9, index++);
         postSelector.getPageExcerpt().type($el.page_excerpt);
         //postSelector.getScreenShot(data.version4, data.scenarios.S9, index++);
+        postSelector.getPageURL().click();
         //@Then 
-        postSelector.getPageExcerptMessageError().should('Excerpt cannot be longer than 300 characters.');        
+        postSelector.getPageExcerptMessageError().should('to.contain','Excerpt cannot be longer than 300 characters.');        
         
       } 
       //else {

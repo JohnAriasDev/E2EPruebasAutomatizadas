@@ -285,7 +285,7 @@ class PostSelector{
         return cy.get('.response', { timeout: 20000 });
     }
     getPageExcerptMessageError(){
-        return cy.get('.response', { timeout: 200000 });
+        return cy.get('textarea[name="post-setting-custom-excerpt"]', { timeout: 20000 }).parent('.form-group').children('p.response');
     } 
     getPageMetadataTitleMessageError(){
         return cy.get('#ember1095', { timeout: 20000 }).children('p').children('span');
@@ -295,6 +295,26 @@ class PostSelector{
     }    
     getPageMetadataURLMessageError(){
         return cy.get('#ember1097', { timeout: 20000 }).children('p');
+    }    getMemberListNoName(){
+        return cy.get('.ember-view.gh-list-data > div > div > h3', { timeout: 20000 });
+    }
+    getMemberLabelInput(){
+        return cy.get('.ember-power-select-trigger-multiple-input', { timeout: 20000 });
+    }
+    getMemberLabelAddBtn(){
+        return cy.get('.ember-power-select-option', { timeout: 20000 });
+    }   
+    getMemberLabelList(){
+        return cy.get('.ember-power-select-multiple-options.sortable-objects.ember-view', { timeout: 20000 });
+    }
+    getMemberNoteUseMessage(){
+        return cy.get('.form-group.mb0.gh-member-note.ember-view > p:nth-child(4) > span', { timeout: 20000 });
+    }
+    getMemberNoteLongMessage(){
+        return cy.get('.form-group.mb0.gh-member-note.ember-view > p.response', { timeout: 20000 });
+    }
+    getMemberLabelRemoveBtn(){
+        return cy.get('.ember-power-select-multiple-option.label-token.js-draggableObject.draggable-object.ember-view > span', { timeout: 20000 });
     }    
 }
 

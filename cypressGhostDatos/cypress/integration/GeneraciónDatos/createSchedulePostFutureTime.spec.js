@@ -9,6 +9,7 @@ describe("schedule a draft post", () => {
   const loginSelector = new LoginSelector();
   const postSelector = new PostSelector();
   const time = faker.date.soon(0.03, new Date())
+  var indexName = 0;
 
   //@Given
   beforeEach(() => {
@@ -40,7 +41,16 @@ describe("schedule a draft post", () => {
     postSelector.getBackButton().click();
     postSelector.getScheduleOption().click();
 
-    //@Then
-    postSelector.getTitleFirstElementTitle().should('to.contain',newPost);
+    
+    //@Then    
+    postSelector.getPostTitles().each(($el, index, $list) =>{
+      let aux = ''
+      aux = $el.text();
+      if(aux.includes(newPost)){
+        indexName = index+1;
+      }
+    }).then(()=>{
+      postSelector.getTitleElementPost(indexName).should('to.contain',newPost);
+    });
   });
 });
