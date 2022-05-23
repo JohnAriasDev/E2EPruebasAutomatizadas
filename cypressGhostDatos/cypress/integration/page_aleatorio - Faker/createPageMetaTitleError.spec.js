@@ -45,9 +45,9 @@ describe("create a page with date error", () => {
     //postSelector.getScreenShot(data.version4, data.scenarios.S9, index++);
     postSelector.getPageURL().clear().type(faker.name.firstName());
     //postSelector.getScreenShot(data.version4, data.scenarios.S9, index++);
-    postSelector.getPageDate().clear().type('2022-'+faker.datatype.number({ min: 5, max: 5})+'-'+faker.datatype.number({ min: 19, max: 22}));
+    postSelector.getPageDate().clear().type('2022-0'+faker.datatype.number({ min: 5, max: 5})+'-'+faker.datatype.number({ min: 19, max: 22}));
     //postSelector.getScreenShot(data.version4, data.scenarios.S9, index++);
-    postSelector.getPageTime().clear().type(faker.datatype.number({ min: 1, max: 23})+':'+faker.datatype.number({ min: 1, max: 59}));
+    postSelector.getPageTime().clear().type(faker.datatype.number({ min: 10, max: 23})+':'+faker.datatype.number({ min: 10, max: 59}));
     //postSelector.getScreenShot(data.version4, data.scenarios.S9, index++);
     postSelector.getPageExcerpt().type(faker.lorem.paragraph());
     //postSelector.getScreenShot(data.version4, data.scenarios.S9, index++);

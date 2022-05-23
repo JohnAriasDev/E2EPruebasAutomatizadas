@@ -285,7 +285,7 @@ class PostSelector{
         return cy.get('.response', { timeout: 20000 });
     }
     getPageExcerptMessageError(){
-        return cy.get('.response', { timeout: 20000 });
+        return cy.get('.response', { timeout: 200000 });
     } 
     getPageMetadataTitleMessageError(){
         return cy.get('#ember1095', { timeout: 20000 }).children('p').children('span');

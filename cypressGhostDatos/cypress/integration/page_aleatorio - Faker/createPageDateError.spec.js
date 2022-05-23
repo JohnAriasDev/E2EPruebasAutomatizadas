@@ -5,7 +5,7 @@ import { faker } from '@faker-js/faker';
 
 describe("create a page with date error", () => {
     let data;
-	let data_test;
+    const newPost = faker.commerce.productName();
     const loginSelector = new LoginSelector();
     const postSelector = new PostSelector();
     let index = 0;
@@ -42,9 +42,9 @@ describe("create a page with date error", () => {
     //postSelector.getScreenShot(data.version4, data.scenarios.S9, index++);
     postSelector.getPageURL().clear().type(faker.name.firstName());
     //postSelector.getScreenShot(data.version4, data.scenarios.S9, index++);
-    postSelector.getPageDate().clear().type('2022-'+faker.datatype.number({ min: 5, max: 7})+'-'+faker.datatype.number({ min: 26, max: 30}));
+    postSelector.getPageDate().clear().type('2022-0'+faker.datatype.number({ min: 5, max: 7})+'-'+faker.datatype.number({ min: 26, max: 30}));
     //postSelector.getScreenShot(data.version4, data.scenarios.S9, index++);
-    postSelector.getPageTime().clear().type(faker.datatype.number({ min: 1, max: 23})+':'+faker.datatype.number({ min: 1, max: 59}));
+    postSelector.getPageTime().clear().type(faker.datatype.number({ min: 10, max: 23})+':'+faker.datatype.number({ min: 10, max: 59}));
     //postSelector.getScreenShot(data.version4, data.scenarios.S9, index++);    
   //@Then
     postSelector.getPageDateMessageError().should('to.contain','Must be in the past');

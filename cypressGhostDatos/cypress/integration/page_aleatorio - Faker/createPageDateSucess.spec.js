@@ -43,12 +43,12 @@ describe("create a page", () => {
     //postSelector.getScreenShot(data.version4, data.scenarios.S9, index++);
     postSelector.getPageURL().clear().type(faker.name.firstName());
     //postSelector.getScreenShot(data.version4, data.scenarios.S9, index++);
-    postSelector.getPageDate().clear().type('2022-'+faker.datatype.number({ min: 5, max: 5})+'-'+faker.datatype.number({ min: 19, max: 22}));
+    postSelector.getPageDate().clear().type('2022-0'+faker.datatype.number({ min: 5, max: 5})+'-'+faker.datatype.number({ min: 19, max: 22}));
     //postSelector.getScreenShot(data.version4, data.scenarios.S9, index++);
     /*postSelector.getBackButton().click();
   //@Then
     postSelector.getTitleFirstElementPages().should('to.contain',data_test[8].page_title);*/
-    postSelector.getPageDateMessageError().should('not.be.visible');
+    postSelector.getPageDateMessageError().should('not.exist');
 
   });
 });

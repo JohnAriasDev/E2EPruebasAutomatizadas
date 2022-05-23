@@ -43,11 +43,11 @@ describe("create a page with excerpt error", () => {
     //postSelector.getScreenShot(data.version4, data.scenarios.S9, index++);
     postSelector.getPageURL().clear().type(faker.name.firstName());
     //postSelector.getScreenShot(data.version4, data.scenarios.S9, index++);
-    postSelector.getPageDate().clear().type('2022-'+faker.datatype.number({ min: 5, max: 5})+'-'+faker.datatype.number({ min: 19, max: 22}));
+    postSelector.getPageDate().clear().type('2022-0'+faker.datatype.number({ min: 5, max: 5})+'-'+faker.datatype.number({ min: 19, max: 22}));
     //postSelector.getScreenShot(data.version4, data.scenarios.S9, index++);
-    postSelector.getPageTime().clear().type(faker.datatype.number({ min: 1, max: 23})+':'+faker.datatype.number({ min: 1, max: 59}));
+    postSelector.getPageTime().clear().type(faker.datatype.number({ min: 10, max: 23})+':'+faker.datatype.number({ min: 10, max: 59}));
     //postSelector.getScreenShot(data.version4, data.scenarios.S9, index++);
-    postSelector.getPageExcerpt().type(faker.lorem.paragraphs(7).substring(0, 350));
+    postSelector.getPageExcerpt().type(faker.lorem.paragraphs(8).substring(0, 400));
     //postSelector.getScreenShot(data.version4, data.scenarios.S9, index++);
   //@Then 
   postSelector.getPageExcerptMessageError().should('Excerpt cannot be longer than 300 characters.');

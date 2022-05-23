@@ -43,7 +43,7 @@ describe("create a page with time error", () => {
     //postSelector.getScreenShot(data.version4, data.scenarios.S9, index++);
     postSelector.getPageURL().clear().type(faker.name.firstName());
     //postSelector.getScreenShot(data.version4, data.scenarios.S9, index++);
-    postSelector.getPageDate().clear().type('2022-'+faker.datatype.number({ min: 5, max: 5})+'-'+faker.datatype.number({ min: 19, max: 22}));
+    postSelector.getPageDate().clear().type('2022-0'+faker.datatype.number({ min: 5, max: 5})+'-'+faker.datatype.number({ min: 19, max: 22}));
     //postSelector.getScreenShot(data.version4, data.scenarios.S9, index++);
     postSelector.getPageTime().clear().type(faker.datatype.number({ min: 24, max: 60})+':'+faker.datatype.number({ min: 61, max: 99}));
     //postSelector.getScreenShot(data.version4, data.scenarios.S9, index++); 
