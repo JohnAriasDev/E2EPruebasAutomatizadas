@@ -3,7 +3,7 @@
         "email":"miso@gmail.com",
         "password":"miso123456"
     },
-    "url4":"http://localhost:3004/",
+    "url4":"http://localhost:3400/",
     "url3":"http://localhost:3003/",
     "dir":"ghost/",
     "scenarios":{
