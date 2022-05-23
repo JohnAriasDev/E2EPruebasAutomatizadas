@@ -51,7 +51,7 @@ describe("create a page", () => {
     /*postSelector.getBackButton().click();
   //@Then
     postSelector.getTitleFirstElementPages().should('to.contain',data_test[8].page_title);*/
-    postSelector.getPageDateMessageError().should('not.be.visible');
+    postSelector.getPageDateMessageError().should('not.exist');
 
   });
 });

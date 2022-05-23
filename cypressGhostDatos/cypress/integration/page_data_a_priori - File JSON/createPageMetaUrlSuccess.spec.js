@@ -65,7 +65,7 @@ describe("create a page with date error", () => {
     //postSelector.getScreenShot(data.version4, data.scenarios.S9, index++);
 
     //@Then
-    postSelector.getPageMetadataURLMessageError().should('not.be.visible');
+    postSelector.getPageMetadataURLMessageError().should('not.exist');
 
   });
 });

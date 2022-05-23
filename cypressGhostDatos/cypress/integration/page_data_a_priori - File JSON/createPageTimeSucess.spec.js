@@ -6,7 +6,6 @@ import { faker } from '@faker-js/faker';
 describe("create a page", () => {
     let data;
 	let data_test;
-    const newPost = faker.commerce.productName();
     const loginSelector = new LoginSelector();
     const postSelector = new PostSelector();
     let index = 0;
@@ -51,7 +50,7 @@ describe("create a page", () => {
     /*postSelector.getBackButton().click();
   //@Then
     postSelector.getTitleFirstElementPages().should('to.contain',data_test[8].page_title);*/
-    postSelector.getPageTimeMessageError().should('not.be.visible');
+    postSelector.getPageTimeMessageError().should('not.exist');
 
   });
 });
