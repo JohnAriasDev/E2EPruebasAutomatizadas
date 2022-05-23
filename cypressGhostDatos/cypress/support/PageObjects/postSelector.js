@@ -249,7 +249,53 @@ class PostSelector{
     getPostTitles(){
         return cy.get('h3.gh-content-entry-title', { timeout: 20000 });
     }
-
+    getPageMetadataURL(){
+        return cy.get('input[name="post-setting-canonicalUrl"]', { timeout: 20000 });
+    }
+    getPageURL(){
+        return cy.get('input[name="post-setting-slug"]', { timeout: 20000 });
+    }
+    getPageTag(){
+        //return cy.get('.ember-power-select-trigger-multiple-input', { timeout: 20000 });
+        return cy.get('#ember-power-select-trigger-multiple-input-ember1070', { timeout: 20000 });
+    }    
+    getPageDate(){ 
+        return cy.get('.gh-date-time-picker-date', { timeout: 20000 }).children('input');;
+    }
+    getPageTime(){
+        return cy.get('.gh-date-time-picker-time', { timeout: 20000 });
+    }
+    getPageExcerpt(){
+        return cy.get('textarea[name="post-setting-custom-excerpt"]', { timeout: 200000 });
+    }
+    getPageAuthor(){
+        //return cy.get('#ember-power-select-trigger-multiple-input-ember330', { timeout: 20000 });
+        return cy.get('.ember-power-select-trigger-multiple-input', { timeout: 20000 });
+    } 
+    getRemoveAuthor(){
+        return cy.get('.ember-power-select-multiple-remove-btn', { timeout: 20000 });
+    }
+    getPageDateMessageError(){
+        return cy.get('.gh-date-time-picker-error', { timeout: 20000 });
+    }
+    getPageTimeMessageError(){
+        return cy.get('.gh-date-time-picker-error', { timeout: 20000 });
+    }
+    getPageAuthorMessageError(){
+        return cy.get('.response', { timeout: 20000 });
+    }
+    getPageExcerptMessageError(){
+        return cy.get('.response', { timeout: 200000 });
+    } 
+    getPageMetadataTitleMessageError(){
+        return cy.get('#ember1095', { timeout: 20000 }).children('p').children('span');
+    }    
+    getPageMetadataDescriptionMessageError(){
+        return cy.get('#ember1096', { timeout: 20000 }).children('p').children('span');
+    }    
+    getPageMetadataURLMessageError(){
+        return cy.get('#ember1097', { timeout: 20000 }).children('p');
+    }    
 }
 
 export default PostSelector
