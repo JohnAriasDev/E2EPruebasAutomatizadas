@@ -3,7 +3,7 @@ import LoginSelector from "../../support/PageObjects/loginSelector";
 import PostSelector from "../../support/PageObjects/postSelector"
 import { faker } from '@faker-js/faker';
 
-describe("create member with label", () => {
+describe("edit member without label", () => {
     let data;
     const myOracleName = faker.name.firstName();
     const myOracle = faker.internet.email();
@@ -22,7 +22,7 @@ describe("create member with label", () => {
     });
   });
   //@When
-  it("create member with label", () => {
+  it("Edit member without label", () => {
     cy.visit(data.url4+data.dir);
     loginSelector.getEmailLogin().type(data.login.email);
     loginSelector.getPasswordLogin().type(data.login.password);
@@ -37,10 +37,13 @@ describe("create member with label", () => {
     postSelector.getMemberOption().first().click();
     postSelector.getFirstElementMembers().children('div').children('p').should('to.contain', myOracle);
     postSelector.getFirstElementMembers().click();
+    postSelector.getMemberLabelRemoveBtn().click();
+    cy.wait(1000);
+    postSelector.getSaveButton().click();    
+    postSelector.getMemberOption().first().click();
+    postSelector.getFirstElementMembers().children('div').children('p').should('to.contain', myOracle);
+    postSelector.getFirstElementMembers().click();
     //@Then
-    postSelector.getMemberLabelList().find('li').its('length').then((len) => {
-      //Do stuff with length
-      expect(len).to.equal(1)
-    });
+    postSelector.getMemberLabelList().should('have.length', 1);
   });
 });

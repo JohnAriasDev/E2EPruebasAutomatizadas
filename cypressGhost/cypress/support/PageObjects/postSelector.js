@@ -225,6 +225,9 @@ class PostSelector{
     getMemberNoteLongMessage(){
         return cy.get('.form-group.mb0.gh-member-note.ember-view > p.response', { timeout: 20000 });
     }
+    getMemberLabelRemoveBtn(){
+        return cy.get('.ember-power-select-multiple-option.label-token.js-draggableObject.draggable-object.ember-view > span', { timeout: 20000 });
+    }
 }
 
 export default PostSelector

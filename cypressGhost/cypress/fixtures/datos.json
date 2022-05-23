@@ -51,7 +51,12 @@
         "S51":"editMember",
         "S52":"editMemberWithoutName",
         "S53":"editMemberWithoutNote",
-        "S54":"editMemberWithNote501Character"    
+        "S54":"editMemberWithNote501Character",
+        "S55":"editMemberWithoutLabel",
+        "S56":"createMemberComplete",
+        "S57":"editMemberComplete",
+        "S58":"editMemberWithBadFormatEmail",        
+        "S59":"editMemberWithwithSpecialCharacterEmail"
     },
     "version4":"V4",
     "version3":"V3"
