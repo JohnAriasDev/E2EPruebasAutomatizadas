@@ -222,7 +222,9 @@ class PostSelector{
     getMemberNoteUseMessage(){
         return cy.get('.form-group.mb0.gh-member-note.ember-view > p:nth-child(4) > span', { timeout: 20000 });
     }
-    
+    getMemberNoteLongMessage(){
+        return cy.get('.form-group.mb0.gh-member-note.ember-view > p.response', { timeout: 20000 });
+    }
 }
 
 export default PostSelector

@@ -45,7 +45,13 @@
         "S45":"createMemberWithLabel",
         "S46":"createMemberWithNote1Character",
         "S47":"createMemberWithNote499Character",
-        "S48":"createMemberWithNote500Character"
+        "S48":"createMemberWithNote500Character",
+        "S49":"createMemberWithNote501Character",
+        "S50":"editMemberWithoutEmail",
+        "S51":"editMember",
+        "S52":"editMemberWithoutName",
+        "S53":"editMemberWithoutNote",
+        "S54":"editMemberWithNote501Character"    
     },
     "version4":"V4",
     "version3":"V3"
