@@ -9,6 +9,7 @@ describe("schedule a draft post", () => {
   const loginSelector = new LoginSelector();
   const postSelector = new PostSelector();
   let index = 0;
+  var indexName = 0;
 
   //@Given
   beforeEach(() => {
@@ -56,7 +57,15 @@ describe("schedule a draft post", () => {
     postSelector.getScheduleOption().click();
     postSelector.getScreenShot(data.version4, data.scenarios.S3, index++);
 
-    //@Then
-    postSelector.getTitleFirstElementTitle().should('to.contain',newPost);
+       
+    postSelector.getPostTitles().each(($el, index, $list) =>{
+      let aux = ''
+      aux = $el.text();
+      if(aux.includes(newPost)){
+        indexName = index+1;
+      }
+    }).then(()=>{
+      postSelector.getTitleElementPost(indexName).should('to.contain',newPost);
+    });
   });
 });
