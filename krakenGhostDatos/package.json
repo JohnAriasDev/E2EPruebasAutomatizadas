@@ -1,0 +1,16 @@
+{
+  "dependencies": {
+    "@cucumber/cucumber": "^8.2.1",
+    "kraken": "^0.4.0",
+    "kraken-node": "^1.0.24"
+  },
+  "name": "krakenghostdatos",
+  "version": "1.0.0",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "",
+  "license": "ISC",
+  "description": ""
+}
