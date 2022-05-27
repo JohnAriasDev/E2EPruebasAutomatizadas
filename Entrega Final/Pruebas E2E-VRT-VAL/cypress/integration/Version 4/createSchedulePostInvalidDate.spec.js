@@ -9,6 +9,7 @@ describe("schedule a draft post with invalid date", () => {
   const loginSelector = new LoginSelector();
   const postSelector = new PostSelector();
   let index = 0;
+  Cypress.config('scrollBehavior', false);
 
   //@Given
   beforeEach(() => {
@@ -35,7 +36,7 @@ describe("schedule a draft post with invalid date", () => {
     postSelector.getScreenShot(data.version4, data.scenarios.S10, index++);
     postSelector.getParagraphInput().type(faker.lorem.paragraph());
     postSelector.getScreenShot(data.version3, data.scenarios.S11, index++);
-    postSelector.getSettingsV3().click();
+    postSelector.getSettings().click();
     postSelector.getScreenShot(data.version3, data.scenarios.S11, index++);
     postSelector.getInputDate().clear().type('2022-0'+faker.datatype.number({ min: 5, max: 7})+'-'+faker.datatype.number({ min: 26, max: 30})).blur();
     postSelector.getScreenShot(data.version3, data.scenarios.S11, index++);

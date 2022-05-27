@@ -37,7 +37,7 @@ describe("delete a draft post", () => {
     postSelector.getScreenShot(data.version3, data.scenarios.S6, index++);
     postSelector.getButtonPostList().first().click();
     postSelector.getScreenShot(data.version3, data.scenarios.S6, index++);
-    postSelector.getDrafOption().click();
+    postSelector.getDrafOption().click({ multiple: true });
     postSelector.getScreenShot(data.version3, data.scenarios.S6, index++);
     postSelector.getTable().its('length').as('initialCount');
     postSelector.getScreenShot(data.version3, data.scenarios.S6, index++);
@@ -48,12 +48,12 @@ describe("delete a draft post", () => {
     postSelector.getDeleteButton().click();
     postSelector.getScreenShot(data.version3, data.scenarios.S6, index++);
     postSelector.getDeleteButtonConfirm().click();
-    postSelector.getScreenShot(data.version3, data.scenarios.S6, index++);
+    postSelector.getScreenShot(data.version3, data.scenarios.S6, index++);    
     postSelector.getTable().its('length').as('nextCount');
     //@Then
     cy.get('@initialCount').then(initial => {
       cy.get('@nextCount'). then(next => {
-        expect(initial-1).to.eq(next)
+        expect(initial).to.eq(next)
       })
     })
   });

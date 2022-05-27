@@ -35,7 +35,7 @@ describe("create a post with invalid excerpt", () => {
     postSelector.getScreenShot(data.version4, data.scenarios.S4, index++);
     postSelector.getParagraphInput().type(faker.lorem.paragraph());
     postSelector.getScreenShot(data.version3, data.scenarios.S4, index++);
-    postSelector.getSettingsV3().click();
+    postSelector.getSettings().click();
     postSelector.getScreenShot(data.version3, data.scenarios.S4, index++);
     postSelector.getInputExcerpt().type(faker.lorem.paragraphs(5).substring(0, 301)).blur();
     postSelector.getScreenShot(data.version3, data.scenarios.S4, index++);

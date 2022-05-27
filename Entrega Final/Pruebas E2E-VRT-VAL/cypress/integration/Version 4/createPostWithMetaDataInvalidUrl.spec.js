@@ -35,7 +35,7 @@ describe("create a post with metadata invalid URL", () => {
     postSelector.getScreenShot(data.version4, data.scenarios.S9, index++);
     postSelector.getParagraphInput().type(faker.lorem.paragraph());
     postSelector.getScreenShot(data.version4, data.scenarios.S9, index++);
-    postSelector.getSettingsV3().click();
+    postSelector.getSettings().click();
     postSelector.getScreenShot(data.version4, data.scenarios.S9, index++);
     postSelector.getMetadataButton().click();
     postSelector.getScreenShot(data.version4, data.scenarios.S9, index++);

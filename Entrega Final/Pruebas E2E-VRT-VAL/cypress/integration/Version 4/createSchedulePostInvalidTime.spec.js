@@ -9,6 +9,7 @@ describe("schedule a draft post with invalid time", () => {
   const loginSelector = new LoginSelector();
   const postSelector = new PostSelector();
   let index = 0;
+  Cypress.config('scrollBehavior', false);
 
   //@Given
   beforeEach(() => {
