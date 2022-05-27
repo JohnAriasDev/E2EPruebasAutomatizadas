@@ -37,7 +37,7 @@ describe("create a post with invalid excerpt", () => {
     postSelector.getScreenShot(data.version3, data.scenarios.S4, index++);
     postSelector.getSettingsV3().click();
     postSelector.getScreenShot(data.version3, data.scenarios.S4, index++);
-    postSelector.getInputExcerpt().type(faker.lorem.paragraphs(5).substring(0, 301)).blur()
+    postSelector.getInputExcerpt().type(faker.lorem.paragraphs(5).substring(0, 301)).blur();
     postSelector.getScreenShot(data.version3, data.scenarios.S4, index++);
   //@Then
     postSelector.getErrorInputExcerpt().should('to.contain','Excerpt cannot be longer than 300 characters.');
