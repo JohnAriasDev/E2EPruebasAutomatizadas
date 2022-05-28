@@ -19,12 +19,12 @@ async function executeTest(){
             fs.mkdirSync(`./results/${datetime}/${config.scenarios[i]}`, { recursive: true });
         }
 
-		let ScenFiles= getFiles(`../cypress/screenshots/version3/${config.scenarios[i]}.spec.js`);
+		let ScenFiles= getFiles(`../../cypress/screenshots/version3/${config.scenarios[i]}.spec.js`);
 		var j=0;
 		for(file of ScenFiles){
 			const data = await compareImages(
-				fs.readFileSync(`../cypress/screenshots/version3/${config.scenarios[i]}.spec.js/${config.scenarios[i]}-${j}.png`),
-				fs.readFileSync(`../cypress/screenshots/version4/${config.scenarios[i]}.spec.js/${config.scenarios[i]}-${j}.png`),
+				fs.readFileSync(`../../cypress/screenshots/version3/${config.scenarios[i]}.spec.js/${config.scenarios[i]}-${j}.png`),
+				fs.readFileSync(`../../cypress/screenshots/version4/${config.scenarios[i]}.spec.js/${config.scenarios[i]}-${j}.png`),
 				options
 			);
 			resultInfo[file] = {
@@ -80,13 +80,13 @@ function steps(b,step){
 		<div class="col-md-4">
 			  <div class="imgcontainer">
 				<span class="imgname">Ghost version 3</span>
-				<img class="img2" src="../../cypress/screenshots/version3/${config.scenarios[config.scenarios.indexOf(b)]}.spec.js/${config.scenarios[config.scenarios.indexOf(b)]}-${step}.png" id="refImage" label="Reference">
+				<img class="img2" src="../../../../cypress/screenshots/version3/${config.scenarios[config.scenarios.indexOf(b)]}.spec.js/${config.scenarios[config.scenarios.indexOf(b)]}-${step}.png" id="refImage" label="Reference">
 			  </div>		
 		</div>
 		<div class="col-md-4">
 			  <div class="imgcontainer">
 				<span class="imgname">Ghost version 4</span>
-				<img class="img2" src="../../cypress/screenshots/version4/${config.scenarios[config.scenarios.indexOf(b)]}.spec.js/${config.scenarios[config.scenarios.indexOf(b)]}-${step}.png" id="refImage" label="Reference">
+				<img class="img2" src="../../../../cypress/screenshots/version4/${config.scenarios[config.scenarios.indexOf(b)]}.spec.js/${config.scenarios[config.scenarios.indexOf(b)]}-${step}.png" id="refImage" label="Reference">
 			  </div>
 		</div>
 		<div class="col-md-4">
