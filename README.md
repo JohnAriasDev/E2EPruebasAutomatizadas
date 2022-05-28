@@ -8,5 +8,5 @@
 | Cortes Poveda   |  Jeferson         | j.cortesp2@uniandes.edu.co  |  
 | Arias Ariza   |  John Alexander        |  ja.ariasa1@uniandes.edu.co |   
 
-# mas en la wiki
+# mas en la wiki aa
 
