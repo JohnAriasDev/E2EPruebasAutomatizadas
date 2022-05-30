@@ -87,9 +87,9 @@ console.log(inputValues);
         return; 
       });
       const emailElement = await page.$('input[name="identification"]');
-      await emailElement.type('miso@gmail.com')
+      await emailElement.type(config.values.ember7)
       const passElement = await page.$('input[name="password"]');
-      await passElement.type('miso123456')
+      await passElement.type(config.values.ember9)
       const loginElement = await page.$('button.login');
       await loginElement.click();
       //-------------------------------------------------------------------------------------------------------------------------------------------------
